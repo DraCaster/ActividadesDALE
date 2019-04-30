@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nivel 1 - Actividad 8</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animacion.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/alertify.core.css" />
+    <link rel="stylesheet" href="../css/alertify.default.css" />
+</head>
+
+<body class="siguientes">
+
+    <!-- PRESENTACION <-->
+    <div id="presentation">
+        <div class="center">
+            <h1 class="cubos">CARGANDO</h1>
+            <h1 class="cubos">ACTIVIDAD ...</h1>
+            <img class="slideDown imgmonstruo" src="../img/tini.png">
+        </div>
+    </div>
+
+    <!-- INICIA EL JUEGO-->
+    <div id="game" style="display:none; width:100%">
+        <!-- contenedor -->
+        <div class="tituloJuego">
+            <h1 id="letra" class="cubos">&iquest;EN QUE FILA VAN?</h1>
+        </div>   
+    <h1>ELIGE CON QUE LETRAS QUERES JUGAR:</h1>
+        <div class="center"> 
+            <button class="botonExtra8"  onclick="window.location.href='j8_1.html'"><img src="../img/palabras/r-m.png"></button>
+        </div>
+        <div class="center"> 
+            <button class="botonExtra8"  onclick="window.location.href='j8_2.html'"><img src="../img/palabras/m-s.png"></button>
+        </div>
+
+<div class="center"> 
+            <button class="botonExtra8" onclick="window.location.href='j8_3.html'" ><img src="../img/palabras/s-r.png"></button>
+        </div>
+<br>
+            <div>
+                <table class="tablas tablamenu">
+                    <td> <img src="../img/casa.png" class="botonmenuN" alt="boton salir" onclick="confirmSalida();"> </td>
+                    <td><img src="../img/check.png" class="botonmenuN" alt="boton comprobar" onclick="javascript: comprobar();"> </td>
+                </table>
+            </div>
+
+      
+        <!-- end contenedor -->
+
+
+        <!--Sonido -->
+
+        <script>
+            window.onload = function() {
+                show();
+                setTimeout(function() {
+                    $('#presentation').css("display", "none");
+                    $('#game').css("display", "block");
+                }, 999);
+
+            };
+        </script>
+        <script type="text/javascript" src="../js/alertify.js"></script>
+        <script type="text/javascript" src="../js/funciones.js"></script>
+        <script type="text/javascript" src="../js/funcionesn2j2.js"></script>
+        <script src="../js/jquery-3.1.1.js"></script>
+</body>
+
+</html>
