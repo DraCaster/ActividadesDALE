@@ -46,13 +46,13 @@ function checkTable(letra) {
 
 /*Cartelito*/
 
-function confirmar() {
+function confirmar(s) {
     sndOK.play();
     alertify.confirm("<img src='../img/feliz.jpg'> <h1><b>&iexcl; EXCELENTE ! <br>&iexcl; SIGAMOS JUGANDO ! </b></h1>", function(e) {
         if (e) {
             alertify.success("ELEGISTE '" + alertify.labels.ok + "'");
             setTimeout(function() {
-                window.location.href = '../html/j2_1.html'; //Pasa al siguiente juego
+                window.location.href = '../html/'+s; //Pasa al siguiente juego
             }, 1300);
         } else {
             alertify.error("ELEGISTE '" + alertify.labels.cancel + "'");
@@ -80,9 +80,9 @@ function enmarcar(event) {
     }
 }
 
-function comprobarN1J8() {
+function comprobarR(s) {
     if (checkTable('a') & checkTable('e')) {
-        confirmar();
+        confirmar(s);
     } else {
         alerta();
     }
@@ -90,7 +90,7 @@ function comprobarN1J8() {
 
 /*FUNCION EXCLUSIVA DE LA ACTIVIDAD EXTRA*/
 
-function comprobarExtra(){
+function comprobarExtra(s){
 
     var letras = ['a','u','t','o'];
     var tabla = $('#a');
@@ -98,7 +98,7 @@ function comprobarExtra(){
     var cont = 0;
     var padre;
     var hijo;
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < items.length; i++) {
         if (items[i].dataset.letra != letras[i]){
             hijo = document.createElement("div");
             hijo.className+="item";
@@ -128,12 +128,16 @@ function comprobarExtra(){
             });
 
     if(cont==4){
-        confirmar();
+        confirmar(s);
     }
     else{
         alerta();
     }
 
 
+}
+
+function cambiarValores(){
+    //permite cambiar las imagenes y las letras para jugar con otra 
 }
 

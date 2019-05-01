@@ -204,7 +204,7 @@ b {
 }
 
 .tablaj3 {
-    width: 1000px;
+    width: 1100px;
     height: 160px;
     background: #42f44b;
     margin-bottom: 0px;
@@ -653,10 +653,11 @@ b {
     width: auto;
     float: left;
     background: #5f5;
-    margin: 40px 0px 40px 40px;
+    margin: 30px 0px 30px 60px;
     border: solid grey;
     border-radius: 4px;
 }
+
 
 .fila1 table {
     width: auto;
@@ -669,7 +670,7 @@ b {
     height: auto;
     float: left;
     background: #f55;
-    margin: 40px 0px 40px 40px;
+    margin: 30px 0px 30px 60px;
     border: solid grey;
     border-radius: 4px;
 }
