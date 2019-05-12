@@ -90,9 +90,15 @@ function comprobarR(s) {
 
 /*FUNCION EXCLUSIVA DE LA ACTIVIDAD EXTRA*/
 
-function comprobarExtra(s){
+function comprobarExtra(s,cantLetras,palabra){
 
-    var letras = ['a','u','t','o'];
+    if(palabra == 'auto'){
+        var letras = ['a','u','t','o'];
+    }
+    else{
+        var letras = ['a','r','o'];
+    }
+
     var tabla = $('#a');
     var items = tabla.children('tbody').children('tr').find('img');
     var cont = 0;
@@ -127,7 +133,7 @@ function comprobarExtra(s){
                 }
             });
 
-    if(cont==4){
+    if(cont==cantLetras){
         confirmar(s);
     }
     else{
