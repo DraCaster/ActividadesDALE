@@ -12,11 +12,11 @@ function checkTable(letra) {
     var cont = 0;
     var padre;
     var hijo;
-    if(letra == 'o0' || letra == 'o1'){
-        letra = 'o';
+    if(letra == 's0' || letra == 's1'){
+        letra = 's';
     }
-    if(letra == 'u0' || letra == 'u1'){
-        letra = 'u';
+    if(letra == 'm0'){
+        letra = 'm';
     }
     
     for (var i = 0; i < items.length; i++) {
@@ -59,7 +59,7 @@ function confirmar() {
         if (e) {
             alertify.success("ELEGISTE '" + alertify.labels.ok + "'");
             setTimeout(function() {
-                window.location.href = '../html/n1j4.html'; //Pasa al siguiente juego
+                window.location.href = '../html/n1j8.html'; //Pasa al siguiente juego
             }, 1300);
         } else {
             alertify.error("ELEGISTE '" + alertify.labels.cancel + "'");
@@ -88,7 +88,7 @@ function enmarcar(event) {
 }
 
 function comprobar() {
-    if (checkTable('o0') & checkTable('o1') & checkTable('u0') & checkTable('u1')) {
+    if (checkTable('s0') & checkTable('m0') & checkTable('s1')) {
         confirmar();
     } else {
         alerta();

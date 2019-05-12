@@ -4,8 +4,9 @@ body.principal {
 }
 
 body.siguientes {
-    background-image: url('../fondo2.png');
-    background-repeat: repeat;
+    background-image: url('../fondo.jpg');
+    background-position: center;
+   /* background-repeat: repeat;*/
 }
 
 body.ayudas {
@@ -51,7 +52,7 @@ p {
     text-align: center;
     font-family: PT_Sans;
     margin: 0 0 0 0;
-    color: #fcd123;
+    color: #fc9300;
 }
 
 
@@ -759,4 +760,61 @@ ul {
 
 .botonExtra8:hover {
     border-color: 10px solid black;
+}
+
+/*tren juego 5*/
+
+
+.fila3 {
+    text-align: center;
+    width: auto;
+    height: auto;
+    float: left;
+    background: #f55;
+    margin: 40px 0px 40px 40px;
+    border: solid grey;
+    border-radius: 4px;
+    margin-top: 93px;
+}
+
+.fila4 {
+    text-align: center;
+    height: auto;
+    width: auto;
+    float: left;
+    background: #5f5;
+    margin: 30px 0px 0px 0px;
+    border: solid grey;
+    border-radius: 4px;
+}
+
+
+.fila4 table {
+    width: auto;
+    height: auto;
+}
+
+.fila5 {
+    text-align: center;
+    width: auto;
+    height: auto;
+    float: left;
+    background: #f55;
+    margin: 0px 0px 0px 0px;
+    border: solid grey;
+    border-radius: 4px;
+}
+
+.fila5 table {
+    width: auto;
+    height: auto;
+}
+
+/*Juego 6*/
+
+.tablaj6 {
+    width: 720px;
+    height: 220px;
+    background: #42f44b;
+
 }

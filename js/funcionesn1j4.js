@@ -11,14 +11,33 @@ function enmarcar(event) {
     imgSelec = event.target;
     if (imgSelec.dataset.marca == "no") { //si no se le hizo click
         imgSelec.dataset.marca = "si";
-        if (imgSelec.id == "e" | imgSelec.id == "e1") { //si le hice click a una imagen que empieza con e
+        if (imgSelec.id == "a" | imgSelec.id == "a1") { //si le hice click a una imagen que empieza con e
             cantImg++; //sumo la cantidad de imagenes con la e
         } else {
             cantImgIncorrectas++;
         }
     } else { //si se le hizo click anteriormente
         imgSelec.dataset.marca = "no"; //se desmarca
-        if (imgSelec.id == "e" | imgSelec.id == "e1") {
+        if (imgSelec.id == "a" | imgSelec.id == "a1") {
+            cantImg--; //se resta porque se deselecciono
+        } else {
+            cantImgIncorrectas--;
+        }
+    }
+}
+
+function enmarcarExtra(event){
+    imgSelec = event.target;
+    if (imgSelec.dataset.marca == "no") { //si no se le hizo click
+        imgSelec.dataset.marca = "si";
+        if (imgSelec.id == "o" | imgSelec.id == "o1") { //si le hice click a una imagen que empieza con e
+            cantImg++; //sumo la cantidad de imagenes con la e
+        } else {
+            cantImgIncorrectas++;
+        }
+    } else { //si se le hizo click anteriormente
+        imgSelec.dataset.marca = "no"; //se desmarca
+        if (imgSelec.id == "o" | imgSelec.id == "o1") {
             cantImg--; //se resta porque se deselecciono
         } else {
             cantImgIncorrectas--;
@@ -48,7 +67,7 @@ function devolverIMG() {
     var tabla = $('.tablaj1').children('tbody').children('tr').find('img');
     for (var i = 0; i < tabla.length; i++) {
         i++;
-        if (tabla[i].dataset.marca == 'si' & tabla[i].dataset.valor != 'e') {
+        if (tabla[i].dataset.marca == 'si' & tabla[i].dataset.valor != 'a') {
             //aca tengo que darla vuelta
         }
     }
