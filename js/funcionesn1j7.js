@@ -53,13 +53,13 @@ function checkTable(letra) {
 
 /*Cartelito*/
 
-function confirmar() {
+function confirmar(s) {
     sndOK.play();
     alertify.confirm("<img src='../img/feliz.jpg'> <h1><b>&iexcl; EXCELENTE ! <br>&iexcl; SIGAMOS JUGANDO ! </b></h1>", function(e) {
         if (e) {
             alertify.success("ELEGISTE '" + alertify.labels.ok + "'");
             setTimeout(function() {
-                window.location.href = '../html/n1j8.html'; //Pasa al siguiente juego
+                window.location.href = '../html/'+s; //Pasa al siguiente juego
             }, 1300);
         } else {
             alertify.error("ELEGISTE '" + alertify.labels.cancel + "'");
@@ -87,10 +87,67 @@ function enmarcar(event) {
     }
 }
 
-function comprobar() {
+function comprobar(s) {
     if (checkTable('s0') & checkTable('m0') & checkTable('s1')) {
-        confirmar();
+        confirmar(s);
     } else {
         alerta();
     }
+}
+
+/*FUNCION EXCLUSIVA DE LA ACTIVIDAD EXTRA*/
+
+function comprobarExtra(s,cantLetras,palabra){
+
+    if(palabra == 'mano'){
+        var letras = ['m','a','n','o'];
+    }
+    else if(palabra == 'mono'){
+        var letras = ['m','o','n','o'];
+    }else{
+        var letra = ['m','e','s','a'];
+    }
+
+    var tabla = $('#m');
+    var items = tabla.children('tbody').children('tr').find('img');
+    var cont = 0;
+    var padre;
+    var hijo;
+    for (var i = 0; i < items.length; i++) {
+        if (items[i].dataset.letra != letras[i]){
+            hijo = document.createElement("div");
+            hijo.className+="item";
+            hijo.appendChild(items[i]);
+            padre = document.getElementById('pos-'+items[i].dataset.pos);
+            padre.appendChild(hijo);
+        }
+        if (items[i].dataset.letra == letras[i]){
+            cont++;
+        }
+    }
+
+    //Le devuelvo la propiedad arrastrable a cada imagen
+    $('.item').draggable({
+                helper: 'clone'
+                
+            });
+
+            $('.box-image').droppable({
+                accept: '.item',
+                hoverClass: 'hovering',
+                drop: function(ev, ui) {
+                    ui.draggable.detach();
+                    $(this).append(ui.draggable);
+
+                }
+            });
+
+    if(cont==cantLetras){
+        confirmar(s);
+    }
+    else{
+        alerta();
+    }
+
+
 }
