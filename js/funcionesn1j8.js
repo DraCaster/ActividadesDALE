@@ -12,6 +12,7 @@ function checkTable(letra) {
     var cont = 0;
     var padre;
     var hijo;
+    
     for (var i = 0; i < items.length; i++) {
         if (items[i].dataset.letra != letra){
             hijo = document.createElement("div");
@@ -46,14 +47,14 @@ function checkTable(letra) {
 
 /*Cartelito*/
 
-function confirmar() {
+function confirmar(p) {
     sndOK.play();
     alertify.confirm("<img src='../img/feliz.jpg'> <h1><b>&iexcl; EXCELENTE ! <br>&iexcl; SIGAMOS JUGANDO ! </b></h1>", function(e) {
         if (e) {
             alertify.success("ELEGISTE '" + alertify.labels.ok + "'");
             setTimeout(function() {
-                window.location.href = '../html/n1j10.html'; //Pasa al siguiente juego
-            }, 1300);
+                window.location.href = '../html/'+p; //Pasa al siguiente juego
+            }, 1300);+
         } else {
             alertify.error("ELEGISTE '" + alertify.labels.cancel + "'");
             confirmSalida();
@@ -80,9 +81,9 @@ function enmarcar(event) {
     }
 }
 
-function comprobarN1J8() {
-    if (checkTable('m') & checkTable('n')) {
-        confirmar();
+function comprobar(tabla1,tabla2,paginaSig) {
+    if (checkTable(tabla1) & checkTable(tabla2)) {
+        confirmar(paginaSig);
     } else {
         alerta();
     }
