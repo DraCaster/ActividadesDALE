@@ -29,3 +29,10 @@ function confirmSalida() {
         window.location.href = '../index.html';
     }, 1300);
 }
+
+
+function ayuda(){
+     setTimeout(function() {
+        alertify.alert("<img src='../img/ayudaw.png'> ");}, 1300);
+      }
+
