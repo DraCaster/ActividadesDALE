@@ -31,7 +31,7 @@
                 <!-- imagenes del juego -->
         
         <div>
-            <table class="tablas tablaj3">
+            <table class="tablas tablaj1">
                 <tr>
                     <td id="pos-0">
                         <div class="item">
@@ -58,13 +58,13 @@
                             <img id="i6" data-letra="i" class="imgJuegosMini fadeIn" data-pos="4" data-valor="isla" onclick="javascript: reproducirSonido('isla.wav'); enmarcar(event);" src="../img/niveles/isla.png">
                         </div>
                     </td>
-                    <td id="pos-5">
+                </tr>
+                <tr>
+                         <td id="pos-5">
                         <div class="item">
                             <img id="e6" data-letra="e" class="imgJuegosMini fadeIn" data-pos="5" data-valor="escuela" onclick="javascript: reproducirSonido('escuela.wav'); enmarcar(event);" src="../img/niveles/escuela.png">
                         </div>
                     </td>
-                </tr>
-                <tr>
                     <td id="pos-6">
                         <div class="item">
                             <img id="i7" data-letra="i" class="imgJuegosMini fadeIn" data-pos="6" data-valor="iman" onclick="javascript: reproducirSonido('iman.wav'); enmarcar(event);" src="../img/niveles/iman.png">
@@ -79,22 +79,12 @@
 
                     <td id="pos-8">
                         <div class="item">
-                            <img src="../img/niveles/uno.png" class="imgJuegosMini fadeIn">
+                            <img src="../img/niveles/uno.png" data-pos="8" data-letra="u" class="imgJuegosMini fadeIn" data-valor="uno" onclick="javascript: reproducirSonido('uno.wav'); enmarcar(event);">
                         </div>
                     </td>
                     <td id="pos-9">
                         <div class="item">
-                            <img src="../img/niveles/espejo.png" class="imgJuegosMini fadeIn">
-                        </div>
-                    </td>
-                    <td id="pos-10">
-                        <div class="item">
-                            <img src="../img/niveles/incendio.png" class="imgJuegosMini fadeIn">
-                        </div>
-                    </td>
-                    <td id="pos-11">
-                        <div class="item">
-                            <img src="../img/niveles/anteojos.png" class="imgJuegosMini fadeIn">
+                            <img src="../img/niveles/anteojos.png" class="imgJuegosMini fadeIn" data-pos="9" data-letra="a" data-valor="anteojos" onclick="javascript: reproducirSonido('anteojos.wav'); enmarcar(event);">
                         </div>
                     </td>
                 </tr>
@@ -112,13 +102,12 @@
                 </table>
             </div>
             <div class="fila4 slideLeft">
+                 <h1>LETRA E</h1>
                 <table id="e" class="tablas">
+
                     <tr>
-                        <td></td>
-                        <td>
-                            <h1>LETRA E</h1>
-                        </td>
-                    </tr>
+                            
+                   
                     <tr>
                         <td>
                             <div class="box-image"> </div>
@@ -132,13 +121,10 @@
                         <td>
                             <div class="box-image"></div>
                         </td>
-                        <td>
-                            <div class="box-image"></div>
-                        </td>
                     </tr>
                 </table>
             </div>
-            <div class="fila5 slideLeft">
+            <div class="fila2 slideLeft">
                 <table id="i" class="tablas">
                     <tr>
                         <td></td>
@@ -160,17 +146,14 @@
                             <div class="box-image">
                             </div>
                         </td>
-                        <td>
-                            <div class="box-image"></div>
-                        </td>
                     </tr>
                 </table>
             </div>
             <!-- BOTONES -->
             <div>
                 <table class="tablas tablamenu">
-                    <td><img src="../img/casa.png" class="botonmenuN" alt="boton salir" onclick="confirmSalida()"></td>
-                    <td><img class="botonmenuN" src="../img/check.png" alt="boton comprobar" onclick="javascript: comprobarN1J8()">
+                    <td><img src="../img/casa.png" class="botonmenuN" alt="boton salir" onclick="confirmSalida();"></td>
+                    <td><img class="botonmenuN" src="../img/check.png" alt="boton comprobar" onclick="javascript: comprobarR('n1j6.html');">
                     </td>
                 </table>
             </div>
@@ -178,7 +161,7 @@
         </div>
         <script type="text/javascript" src="../js/alertify.js"></script>
         <script src="../js/funciones.js"></script>
-        <script src="../js/funcionesn1j3.js"></script>
+        <script src="../js/funcionesn1j5.js"></script>
         <script src="../js/jquery-3.1.1.js"></script>
         <script type="text/javascript"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
