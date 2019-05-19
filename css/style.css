@@ -39,12 +39,6 @@ body.ayudas {
     font-family: cajitas;
 }
 
-.l2 {
-    color: #46d8db;
-    font-size: 50px;
-    font-family: cajitas;
-}
-
 h1,
 h2,
 p {
@@ -438,14 +432,14 @@ ul {
     border: 5px solid black;
 }
 
-.botonExtra8 {
+.botonExtraA {
     height: 120px;
     width: 180px;
     border: 5px solid #42f44b;
 }
 
-.botonExtra8:hover {
-    border-color: 10px solid black;
+.botonExtraA:hover {
+    border: 5px solid black;
 }
 
 
