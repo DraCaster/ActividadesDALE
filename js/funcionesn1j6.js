@@ -10,7 +10,7 @@ function enmarcarMas(event) {
     selec = event.target;
     obj = document.getElementById(selec.id);
     //console.log($('#'+selec.id).data('marca'));
-    if(obj.data.marca == "no"){
+    if(obj.dataset.marca == "no"){
         obj.setAttribute('marca', 'si');
         obj.className +=" zoom";
         obj.className +=" cambiarBorde";
@@ -43,7 +43,7 @@ function confirmar() {
         if (e) {
             alertify.success("ELEGISTE '" + alertify.labels.ok + "'");
             setTimeout(function() {
-                window.location.href = '../html/n1j6.html'; //Pasa al siguiente juego
+                window.location.href = '../html/n1j7.html'; //Pasa al siguiente juego
             }, 1300);
         } else {
             alertify.error("ELEGISTE '" + alertify.labels.cancel + "'");
