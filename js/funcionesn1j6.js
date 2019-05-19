@@ -11,7 +11,8 @@ function enmarcarMas(event) {
     obj = document.getElementById(selec.id);
     //console.log($('#'+selec.id).data('marca'));
     if(obj.dataset.marca == "no"){
-        obj.setAttribute('marca', 'si');
+        obj.dataset.marca = "si";
+       // obj.setAttribute('marca', 'si');
         obj.className +=" zoom";
         obj.className +=" cambiarBorde";
         if(obj.dataset.valor == 'm'){
@@ -22,7 +23,8 @@ function enmarcarMas(event) {
         }
     }
     else{
-        obj.setAttribute('marca','no');
+         obj.dataset.marca = "no";
+        //obj.setAttribute('marca','no');
         $('#' + selec.id).removeClass("zoom");
         $('#' + selec.id).removeClass("cambiarBorde");
         if(obj.dataset.valor == 'm'){
