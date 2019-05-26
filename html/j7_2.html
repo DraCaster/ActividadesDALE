@@ -17,12 +17,12 @@
     <div>
         <table class="tablas tablaj1 slideLeft">
          <tr>
-            <td id="pos-0"><div class="item"><img src="../img/palabras/n.png" class="imgJuegosMini slideDown" onclick="javascript: enmarcar(event);" data-pos="0" data-letra="n"></div></td>
-            <td id="pos-1"><div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown" onclick="javascript: enmarcar(event);" data-pos="1" data-letra="o"></div></td>
-            <td id="pos-2"><div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown" onclick="javascript: enmarcar(event);" data-pos="2" data-letra="o"></div></td>
-            <td id="pos-3"><div class="item"><img src="../img/palabras/m.png" class="imgJuegosMini slideDown" onclick="javascript: enmarcar(event);" data-pos="3" data-letra="m"></div></td>
+            <td id="pos-0"><div class="item"><img src="../img/palabras/n.png" class="imgJuegosMini slideDown" onclick="javascript: reproducirSonido('n.wav'); enmarcar(event);" data-pos="0" data-letra="n"></div></td>
+            <td id="pos-1"><div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown" onclick="javascript: reproducirSonido('o.wav'); enmarcar(event);" data-pos="1" data-letra="o"></div></td>
+            <td id="pos-2"><div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown" onclick="javascript: reproducirSonido('o.wav'); enmarcar(event);" data-pos="2" data-letra="o"></div></td>
+            <td id="pos-3"><div class="item"><img src="../img/palabras/m.png" class="imgJuegosMini slideDown" onclick="javascript: reproducirSonido('m.wav'); enmarcar(event);" data-pos="3" data-letra="m"></div></td>
             <td><div>
-                     <img src="../img/niveles/mono.png" class="imgJuegosG">
+                     <img src="../img/niveles/mono.png" class="imgJuegosG" onclick="reproducirSonido('mono.wav');">
                  </div>
             </td>
          </tr>

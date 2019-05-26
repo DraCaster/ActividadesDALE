@@ -348,6 +348,7 @@ b {
     border: solid grey;
     border-radius: 4px;
     margin-top: 94px;
+    
 }
 
 .fila1 {
@@ -496,4 +497,8 @@ ul {
     width: 720px;
     height: 220px;
     background: #42f44b;
+}
+
+.colorOsc{
+    color:black;
 }
