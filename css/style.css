@@ -1,15 +1,15 @@
 body.principal {
-    background-image: url('../fondo1.png');
+    background-image: url('../img/fondo1.png');
     background-repeat: repeat;
 }
 
 body.siguientes {
-    background-image: url('../fondo.jpg');
+    background-image: url('../img/fondo.jpg');
     background-position: center;
 }
 
 body.ayudas {
-    background-image: url('../fondopapel.png');
+    background-image: url('../img/fondopapel.png');
     background-repeat: repeat;
 }
 

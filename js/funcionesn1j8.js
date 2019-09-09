@@ -54,7 +54,7 @@ function confirmar(p) {
             alertify.success("ELEGISTE '" + alertify.labels.ok + "'");
             setTimeout(function() {
                 window.location.href = '../html/'+p; //Pasa al siguiente juego
-            }, 1300);+
+            }, 1300);
         } else {
             alertify.error("ELEGISTE '" + alertify.labels.cancel + "'");
             confirmSalida();
