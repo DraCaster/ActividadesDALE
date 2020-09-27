@@ -24,7 +24,6 @@ function checkTable(letra) {
             cont++;
         }
     }
-
     //Le devuelvo la propiedad arrastrable a cada imagen
     $('.item').draggable({
                 helper: 'clone'

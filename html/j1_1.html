@@ -13,7 +13,6 @@
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
 </head>
 
 <body class="siguientes">
@@ -38,53 +37,52 @@
 			onclick="javascript: reproducirSonido('juego1extra.wav'); quitarAnimacion()">&nbsp;<img
 			class="imgAyuda2 slideLeftBtn" src="../assets/hacerclic.png" /></h1>
 	</div>
-
 	<table class="tabla1-2">
 		<tr>
 			<td id="pos-0">
-				<div class="item"><img src="../img/palabras/a.png" class="imgJuegosMini slideDown letras"
-						onclick="javascript: reproducirSonido('a.wav'); enmarcar(event);" data-pos="0" data-letra="a">
+				<div class="item"><img src="../img/palabras/a.png" class="slideDown letras"
+						onclick="javascript: reproducirSonido('A.wav'); enmarcar(event);" data-pos="0" data-letra="a">
 				</div>
 			</td>
 			<td id="pos-1">
 				<div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown letras"
-						onclick="javascript: reproducirSonido('o.wav'); enmarcar(event);" data-pos="1" data-letra="o">
+						onclick="javascript: reproducirSonido('O.wav'); enmarcar(event);" data-pos="1" data-letra="o">
 				</div>
 			</td>
 			<td id="pos-2">
 				<div class="item"><img src="../img/palabras/a.png" class="imgJuegosMini slideDown letras"
-						onclick="javascript: reproducirSonido('a.wav'); enmarcar(event);" data-pos="2" data-letra="a">
+						onclick="javascript: reproducirSonido('A.wav'); enmarcar(event);" data-pos="2" data-letra="a">
 				</div>
 			</td>
 			<td id="pos-3">
 				<div class="item"><img src="../img/palabras/u.png" class="imgJuegosMini slideDown letras
 					"
-						onclick="javascript: reproducirSonido('u.wav'); enmarcar(event);" data-pos="3" data-letra="u">
+						onclick="javascript: reproducirSonido('U.wav'); enmarcar(event);" data-pos="3" data-letra="u">
 				</div>
 			</td>
 			<td id="pos-4">
 				<div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown letras"
-						onclick="javascript: reproducirSonido('o.wav'); enmarcar(event);" data-pos="4" data-letra="o">
+						onclick="javascript: reproducirSonido('O.wav'); enmarcar(event);" data-pos="4" data-letra="o">
 				</div>
 			</td>
 			<td id="pos-5">
 				<div class="item"><img src="../img/palabras/a.png" class="imgJuegosMini slideDown letras"
-						onclick="javascript: reproducirSonido('a.wav'); enmarcar(event);" data-pos="5" data-letra="a">
+						onclick="javascript: reproducirSonido('A.wav'); enmarcar(event);" data-pos="5" data-letra="a">
 				</div>
 			</td>
 			<td id="pos-6">
 				<div class="item"><img src="../img/palabras/a.png" class="imgJuegosMini slideDown letras"
-						onclick="javascript: reproducirSonido('a.wav'); enmarcar(event);" data-pos="6" data-letra="a">
+						onclick="javascript: reproducirSonido('A.wav'); enmarcar(event);" data-pos="6" data-letra="a">
 				</div>
 			</td>
 			<td id="pos-7">
 				<div class="item"><img src="../img/palabras/r.png" class="imgJuegosMini slideDown letras"
-						onclick="javascript: reproducirSonido('r.wav'); enmarcar(event);" data-pos="7" data-letra="r">
+						onclick="javascript: reproducirSonido('R.wav'); enmarcar(event);" data-pos="7" data-letra="r">
 				</div>
 			</td>
 			<td id="pos-8">
 				<div class="item"><img src="../img/palabras/l.png" class="imgJuegosMini slideDown letras"
-						onclick="javascript: reproducirSonido('l.wav'); enmarcar(event);" data-pos="8" data-letra="l">
+						onclick="javascript: reproducirSonido('L.wav'); enmarcar(event);" data-pos="8" data-letra="l">
 				</div>
 			</td>
 		</tr>
@@ -93,7 +91,7 @@
 	<table class="tablas tablaExtra">
 		<tr>
 			<td>
-				<img id="o1" onclick="javascript: reproducirSonido('ola.wav')" src="../img/niveles/ola.png" class="imgJuegosMini">
+				<img onclick="javascript: reproducirSonido('ola.wav')" src="../img/niveles/ola.png" class="imgJuegosMini">
 			</td>
 			<td>
 				<table id="t1-o">
@@ -101,11 +99,7 @@
 						<div class="box-image-rayitas"> </div>
 					</td>
 					<td>
-					  
-						<div class="box-image-rayitas"></div>
-					</td>
-					<td>
-						<div class="box-image-rayitas"></div>
+					<div class="box-image-rayitas"></div>
 					</td>
 					<td>
 						<div class="box-image-rayitas"></div>
@@ -113,6 +107,8 @@
 				</table>
 			</td>
 		</tr>
+	</table>
+	<table style="display: none;">
 		<tr>
 			<td>
 				<img id="o" onclick="javascript: reproducirSonido('oso.wav')" src="../img/niveles/oso.png" class="imgJuegosMini">
@@ -123,10 +119,6 @@
 						<div class="box-image-rayitas"> </div>
 					</td>
 					<td>
-					  
-						<div class="box-image-rayitas"></div>
-					</td>
-					<td>
 						<div class="box-image-rayitas"></div>
 					</td>
 					<td>
@@ -135,6 +127,8 @@
 				</table>
 			</td>
 		</tr>
+	</table>
+	<table style="display: none;">
 		<tr>
 			<td>
 				<img id="u" onclick="javascript: reproducirSonido('uno.wav')" src="../img/niveles/uno.png" class="imgJuegosMini">
@@ -142,13 +136,10 @@
 			<td>
 				<table id="t3-u">
 					<td>
-						<div class="box-image-rayitas"> </div>
-					</td>
-					<td>
-					  
 						<div class="box-image-rayitas"></div>
 					</td>
 					<td>
+
 						<div class="box-image-rayitas"></div>
 					</td>
 					<td>
@@ -168,10 +159,32 @@
 	</div>
 	<script src="../js/jquery-3.1.1.js"></script>
 	<script type="text/javascript" src="../js/alertify.js"></script>
+	<script src="../interfaz/jquery-ui.min.js"></script>
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script src="../js/funciones.js"></script>
 	<script src="../js/funcionesn1j1.js"></script>
+	<script>
+	$('.item').draggable({
+		helper: 'clone'
+	});
+
+	$('.box-image-rayitas').droppable({
+		accept: '.item',
+		hoverClass: 'hovering',
+		drop: function (ev, ui) {
+			ui.draggable.detach();
+			$(this).append(ui.draggable);
+		}
+	});
+
+	function checkOut() {
+  setInterval(function(){ checkGameExtra() }, 3000);
+}
+
+/* checkOut() */
+
+	</script>
 </body>
 
 </html>

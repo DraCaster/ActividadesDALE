@@ -1,11 +1,18 @@
 
+.div1{
+    width: 300px;
+}
+
 .tablaj1-extra {
-    width: 700px;
-    height: 150px;
+    width: auto;
+    height: 120px;
     background: #42f44b;
 }
 
+
 .letras{
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
@@ -21,6 +28,6 @@
 
 .box-image-rayitas{
     border-bottom: 4px solid blue;
-    width: 105px;
-    height: 95px;
+    width: 60px;
+    height: 60px;
 }

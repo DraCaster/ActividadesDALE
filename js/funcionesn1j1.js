@@ -3,7 +3,10 @@ let letraSelec = null;
 
 const quitarAnimacion = () => {
     let element = document.getElementById("ayudabtn");
-  element.classList.remove("pulse");
+    element.classList.remove("pulse");
+    let ocultarMano = document.getElementById("manoayuda")
+    ocultarMano.classList.add("imgOcultar")
+
 }
 
 const mostrarImgPrincipal = (url,titulo) => {
@@ -19,6 +22,57 @@ const mostrarImgPrincipal = (url,titulo) => {
   elementImg.src=url;
   elementTitulo.innerHTML= titulo
 }
+
+//JuegoExtra
+let tablas = 0;
+
+const checkGameExtra = () => {
+ 
+   switch (tablas){
+    case 0: checkGameExtra('o'); break;
+    case 1: checkGameExtra('o1'); break;
+    case 2: checkGameExtra('u'); break;
+    default: console.log('nandemonai')
+  } 
+}
+
+const checkTableGameExtra = (letra) => {
+    var tabla = $('#' + letra);
+    var items = tabla.children('tbody').children('tr').find('img');
+    var cont = 0;
+    var padre;
+    var hijo;
+    for (var i = 0; i < items.length; i++) {
+        if (items[i].dataset.letra != letra){
+            hijo = document.createElement("div");
+            hijo.className+="item";
+            hijo.appendChild(items[i]);
+            padre = document.getElementById('pos-'+items[i].dataset.pos);
+            padre.appendChild(hijo);
+        }
+        if (items[i].dataset.letra == letra){
+            cont++;
+        }
+    }
+    //Le devuelvo la propiedad arrastrable a cada imagen
+    $('.item').draggable({
+                helper: 'clone'
+                
+            });
+
+            $('.box-image').droppable({
+                accept: '.item',
+                hoverClass: 'hovering',
+                drop: function(ev, ui) {
+                    ui.draggable.detach();
+                    $(this).append(ui.draggable);
+
+                }
+            });
+
+   return (cont==4);
+}
+
 
 /*Selecciona con color una imagen elegida, y comprueba que 
 no haya otra seleccionada, en ese caso, la despinta, y pinta la nueva */
