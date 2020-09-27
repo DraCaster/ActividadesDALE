@@ -3,6 +3,7 @@
 <head>
     <title>Actividad 10 - letra S</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/componentStyle.css">
     <link rel="stylesheet" href="../css/animacion.css">
     <link rel="stylesheet" type="text/css" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/alertify.core.css" />
@@ -33,6 +34,30 @@
     </div>
     <div id="game" style="display: none;">
         <!-- ENCABEZADO -->
+        <nav>
+            <div class="nav-wrapper">
+                <a data-target="mobile-demo" class="sidenav-trigger btn-floating pulse"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li>
+                <a onclick="confirmSalida();">
+                 INICIO 
+                </a>
+                </li>
+                <li><a class="colorPrincipal color3" onclick="javascript: ingresar('nivel1.html');"> 
+                    ACTIVIDADES</a></li>
+              </ul>
+            </div>
+          </nav>
+        
+          <ul class="sidenav" id="mobile-demo">
+            <h6 class="center colorPrincipal">ELEGI UNA OPCION</h6>
+            <li><a onclick="confirmSalida();" class="colorPrincipal">
+                <i class="material-icons color4">home</i>
+                INICIO</a></li>
+            <li><a class="colorPrincipal color3" onclick="javascript: ingresar('nivel1.html');"> 
+                <i class="material-icons">create</i>
+                ACTIVIDADES</a></li>
+          </ul>
         <div class="tituloJuego">
             <h4>NAIPES &nbsp; &nbsp;</h4>
         </div>
