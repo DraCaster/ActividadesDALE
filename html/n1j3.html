@@ -24,15 +24,22 @@
 </head>
 
 <body class="siguientes">
+
+    <!-- PRESENTACION <-->
+    <div id="presentation">
+        <div class="center">
+            <h1>CARGANDO</h1>
+            <h1>ACTIVIDAD...</h1>
+            <img class="slideDown imgmonstruo" src="../assets/monstermenu1.jpg">
+        </div>
+    </div>
+    <div id="game" style="display: none;">
     <!--ENCABEZADO <-->
     <div class="tituloJuego">
-        <table class="tablas">
-            <td> <img src="../img/ayuda.png" id="imgsonido" class=" imgmonstruo" onclick="ingresar('ayudaj3.html');"></td>
-            <td>
-                <h1 id="letra" class="cubos">ARMAR PAREJAS</h1>
-            </td>
-            <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img class="imgAyuda" src="../img/help.png" onclick="javascript: reproducirSonido('juego3.wav');"></td>
-        </table>
+        <h4>ARMAR PAREJAS</h4>
+    </div>
+    <div class="center">
+        <img class="imgAyuda globoAyuda" src="../assets/ayudavoz.svg" onclick="javascript: reproducirSonido('juego3.wav');">&nbsp;<img class="imgAyuda2 slideRight" src="../assets/hacerclic.png"/> 
     </div>
     <div>
         <!-- imagenes del juego -->
@@ -198,7 +205,6 @@
 
             };
         </script>
-
 </body>
 
 </html>
