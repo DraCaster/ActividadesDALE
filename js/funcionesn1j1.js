@@ -1,6 +1,12 @@
 let pintado = false; // En el juego , si se selecciona una imagen esta var se pone en true
 let letraSelec = null;
 
+const quitarAnimacion = () => {
+    let element = document.getElementById("ayudabtn");
+  element.classList.remove("pulse");
+
+}
+
 /*Selecciona con color una imagen elegida, y comprueba que 
 no haya otra seleccionada, en ese caso, la despinta, y pinta la nueva */
 function enmarcar(event) {
