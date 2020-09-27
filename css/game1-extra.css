@@ -1,0 +1,20 @@
+
+.tablaj1-extra {
+    width: 700px;
+    height: 150px;
+    background: #42f44b;
+}
+
+.letras{
+    border-radius: 50%;
+}
+
+.tabla1-2{
+    width: 400px;
+    height: auto;
+    background: #42f44b;
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
