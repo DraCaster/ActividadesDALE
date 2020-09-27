@@ -18,3 +18,9 @@
     border-collapse: collapse;
     border-radius: 10px;
 }
+
+.box-image-rayitas{
+    border-bottom: 4px solid blue;
+    width: 105px;
+    height: 95px;
+}
