@@ -44,7 +44,7 @@ var sndNO = new Audio("../sonidos/error.wav");
 function confirmar(s) {
   sndOK.play();
   alertify.confirm(
-    "<img src='../img/feliz.jpg'> <h1><b>&iexcl; EXCELENTE ! <br>&iexcl; SIGAMOS JUGANDO ! </b></h1>",
+    "<img src='../assets/feliz.png'> <h1><b>&iexcl; EXCELENTE ! <br>&iexcl; SIGAMOS JUGANDO ! </b></h1>",
     function (e) {
       if (e) {
         alertify.success("ELEGISTE '" + alertify.labels.ok + "'");
@@ -64,7 +64,7 @@ function alerta() {
   //un alert
   sndNO.play();
   alertify.alert(
-    "<img src='../assets/monster-sad.png'> <h3> &iexcl; INTENTALO DE NUEVO ! </b></h3>",
+    "<img src='../assets/triste.png'> <h3> &iexcl; INTENTALO DE NUEVO ! </b></h3>",
     function () {
       //aqui introducimos lo que haremos tras cerrar la alerta.
     }
