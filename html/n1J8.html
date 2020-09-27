@@ -4,6 +4,7 @@
 <head>
     <title>Nivel 1 - Actividad 8</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/componentStyle.css">
     <link rel="stylesheet" href="../css/animacion.css">
     <link rel="stylesheet" type="text/css" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/alertify.core.css" />
@@ -28,14 +29,38 @@
     <!-- PRESENTACION <-->
     <div id="presentation">
         <div class="center">
-            <h1 class="cubos">CARGANDO</h1>
-            <h1 class="cubos">ACTIVIDAD ...</h1>
-            <img class="slideDown imgmonstruo" src="../img/tini.png">
+            <h1>CARGANDO</h1>
+            <h1>ACTIVIDAD...</h1>
+            <img class="slideDown imgmonstruo" src="../assets/monstermenu1.png">
         </div>
     </div>
 
     <!-- INICIA EL JUEGO-->
-    <div id="game" style="display:none; width:100%">
+    <div id="game" style="display: none;">
+        <nav>
+            <div class="nav-wrapper">
+                <a data-target="mobile-demo" class="sidenav-trigger btn-floating pulse"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li>
+                <a onclick="confirmSalida();">
+                 INICIO 
+                </a>
+                </li>
+                <li><a class="colorPrincipal color3" onclick="javascript: ingresar('nivel1.html');"> 
+                    ACTIVIDADES</a></li>
+              </ul>
+            </div>
+          </nav>
+        
+          <ul class="sidenav" id="mobile-demo">
+            <h6 class="center colorPrincipal">ELEGI UNA OPCION</h6>
+            <li><a onclick="confirmSalida();" class="colorPrincipal">
+                <i class="material-icons color4">home</i>
+                INICIO</a></li>
+            <li><a class="colorPrincipal color3" onclick="javascript: ingresar('nivel1.html');"> 
+                <i class="material-icons">create</i>
+                ACTIVIDADES</a></li>
+          </ul>
         <!-- contenedor -->
         <div class="tituloJuego">
             <h4>¿ EN QUE FILA VAN ?</h4>
