@@ -7,9 +7,15 @@ const quitarAnimacion = () => {
 }
 
 const mostrarImgPrincipal = (url,titulo) => {
-  console.log(url,titulo)
+ 
+  let tabla = document.getElementById("tabla1-1")
+  tabla.classList.remove("imgOcultar")
+  tabla.classList.add("tabla1-1")
+
   let elementImg = document.getElementById("imgj1");
-  let elementTitulo = document.getElementById("titulo1");
+  elementImg.classList.add("imgJuegosG")
+  console.log('elemimg',elementImg)
+  let elementTitulo = document.getElementById("tituloj1");
   elementImg.src=url;
   elementTitulo.innerHTML= titulo
 }
@@ -22,12 +28,12 @@ function enmarcar(event) {
     selec.className += " cambiarBorde";
     pintado = true;
     letraSelec = selec.id;
-    cantAct = cantAct + 1;
+   
   } else {
     $(".cambiarBorde").removeClass("cambiarBorde");
     selec.className += " cambiarBorde";
     letraSelec = selec.id;
-    cantAct = cantAct + 2;
+   
   }
 }
 var sndOK = new Audio("../sonidos/ganaste.wav");
@@ -58,7 +64,7 @@ function alerta() {
   //un alert
   sndNO.play();
   alertify.alert(
-    "<img src='../img/triste.jpg'> <h1><b> &iexcl; TE EQUIVOCASTE! <br> &iexcl; INTENTALO DE NUEVO ! </b></h1>",
+    "<img src='../assets/monster-sad.png'> <h3> &iexcl; INTENTALO DE NUEVO ! </b></h3>",
     function () {
       //aqui introducimos lo que haremos tras cerrar la alerta.
     }

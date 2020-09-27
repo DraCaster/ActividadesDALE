@@ -196,9 +196,20 @@ b {
 
 .tablaj1 {
     width: 700px;
-    height: 200px;
+    height: 150px;
     background: #42f44b;
 }
+
+.tabla1-1{
+    width: 400px;
+    height: auto;
+    background: #42f44b;
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
 
 .tablamenu {
     width: 300px;
