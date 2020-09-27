@@ -1,10 +1,16 @@
+body{
+    font-family: 'Short Stack', cursive;
+}
+
+
 body.principal {
-    background-image: url('../img/fondo1.png');
+    background-image: url('../assets/wallpaper.jpeg');
     background-repeat: repeat;
+    
 }
 
 body.siguientes {
-    background-image: url('../img/fondo.jpg');
+    background-image: url('../assets/wallpaper.jpeg');
     background-position: center;
 }
 
@@ -41,11 +47,12 @@ body.ayudas {
 
 h1,
 h2,
+h3,
 p {
     text-align: center;
-    font-family: PT_Sans;
+    font-family: 'Short Stack', cursive;
     margin: 0 0 0 0;
-    color: #fc9300;
+    color:#6a5f99;
 }
 
 
@@ -90,8 +97,14 @@ b {
 }
 
 .imgAyuda {
+    margin-left: 10px;
     height: 80px;
     width: 80px;
+}
+
+.imgAyuda2{
+    height: 60px;
+    width: 60px;
 }
 
 .imgmonstruo {

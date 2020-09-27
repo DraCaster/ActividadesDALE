@@ -1,0 +1,36 @@
+.modal-contenido {
+  background-color: white;
+  width: 300px;
+  padding: 10px 20px;
+  margin: 20% auto;
+  position: relative;
+  border-radius: 20;
+}
+
+.font-general{
+  font-family: 'Short Stack', cursive;
+  color: "black"
+}
+
+.btn-select:hover{
+  border: 2px solid black;
+}
+
+.color1{
+  color:#ed6663
+}
+
+.color2{
+color: #ff4b5c
+}
+
+.color3{
+  color:#ffc93c
+}
+
+.color4{
+ color:#81b214
+}
+
+
+

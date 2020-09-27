@@ -1,47 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <title>Aprendo jugando</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="css/componentStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Short+Stack"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="principal">
-    <br>
-    <br>
+  <body class="principal">
+    <br />
+    <h3>MENU PRINCIPAL</h3>
+    <br />
     <div class="container center">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div>
-            <div>
-                <img class="botonmenuC" src="img/boton1.png" alt="boton nivel 1" onclick="javascript: ingresar('html/nivel1.html');">
+      <div class="col s12 m6">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="./assets/monster-happy.jpg"/>
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h4 class="font-general">JUEGOS</h4>
             </div>
-        </div>
-        <br>
-        <div>
-            <div>
-                <img class="botonmenuC" src="img/boton2.png" alt="boton nivel 2" onclick="javascript: ingresar('html/nivel2.html');">
+            <div class="card-action">
+              <a
+                class="waves-effect waves-light btn"
+                onclick="javascript: ingresar('html/nivel1.html');"
+                ><i class="material-icons right">arrow_right_alt</i>ENTRAR</a
+              >
             </div>
+          </div>
         </div>
-        <br>
-        <div>
-            <div>
-                <img class="botonmenuC" src="img/boton3.png" alt="boton acercade" onclick="javascript: ingresar('html/acercade.html');">
-            </div>
-        </div>
-    </div>
+      </div>
 
+      <div class="col s12 m6">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="./assets/monster-happy4.jpg" />
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h4 class="font-general">ACERCA DE</h4>
+            </div>
+            <div class="card-action">
+              <a
+                class="waves-effect waves-light btn"
+               
+                ><i class="material-icons right">arrow_right_alt</i>ENTRAR</a
+              >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/funciones.js"></script>
     <script src="js/jquery-3.1.1.js"></script>
-
-</body>
-
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
 </html>
