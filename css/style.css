@@ -48,6 +48,7 @@ body.ayudas {
 h1,
 h2,
 h3,
+h4,
 p {
     text-align: center;
     font-family: 'Short Stack', cursive;
@@ -98,13 +99,16 @@ b {
 
 .imgAyuda {
     margin-left: 10px;
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
 }
 
 .imgAyuda2{
     height: 60px;
     width: 60px;
+    animation-name: balanceo;
+    animation-duration: 2s;
+    animation-iteration-count: 5;
 }
 
 .imgmonstruo {
