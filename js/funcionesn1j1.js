@@ -4,7 +4,14 @@ let letraSelec = null;
 const quitarAnimacion = () => {
     let element = document.getElementById("ayudabtn");
   element.classList.remove("pulse");
+}
 
+const mostrarImgPrincipal = (url,titulo) => {
+  console.log(url,titulo)
+  let elementImg = document.getElementById("imgj1");
+  let elementTitulo = document.getElementById("titulo1");
+  elementImg.src=url;
+  elementTitulo.innerHTML= titulo
 }
 
 /*Selecciona con color una imagen elegida, y comprueba que 
