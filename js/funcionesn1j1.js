@@ -1,6 +1,8 @@
 let pintado = false; // En el juego , si se selecciona una imagen esta var se pone en true
 let letraSelec = null;
 
+
+
 const quitarAnimacion = () => {
     let element = document.getElementById("ayudabtn");
     element.classList.remove("pulse");

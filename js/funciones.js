@@ -16,6 +16,11 @@ function ingresar(val) {
     }, 300);
 }
 
+const reproducir = s =>  {
+    var sonido = new Audio("../sonidos/lentos/" + s);
+    sonido.play();
+  }
+
 function reproducirSonido(s) {
     var sonido = new Audio("../sonidos/" + s);
     sonido.play();

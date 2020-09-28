@@ -97,7 +97,7 @@
           id="ayudabtn"
           class="imgAyuda globoAyuda pulse"
           src="../assets/ayudavoz.svg"
-          onclick="javascript: reproducirSonido('juego1.wav'); quitarAnimacion()"
+          onclick="javascript: reproducir('juego1.wav'); quitarAnimacion()"
         />
         &nbsp;
         <img
@@ -133,7 +133,7 @@
                   id="e"
                   class="imgJuegosMini"
                   data-valor="espada"
-                  onclick="javascript: reproducirSonido('espada.wav'); enmarcar(event); mostrarImgPrincipal('../img/niveles/espada.png','ESPADA')"
+                  onclick="javascript: reproducir('espada.wav'); enmarcar(event); mostrarImgPrincipal('../img/niveles/espada.png','ESPADA')"
                   src="../img/niveles/espada.png"
                   alt="imagen espada"
                 />
@@ -143,7 +143,7 @@
                   id="u"
                   class="imgJuegosMini"
                   data-valor="uno"
-                  onclick="javascript: reproducirSonido('uno.wav');
+                  onclick="javascript: reproducir('uno.wav');
                             enmarcar(event); mostrarImgPrincipal('../img/niveles/uno.png','UNO')"
                   src="../img/niveles/uno.png"
                   alt="imagen numero uno"
@@ -151,14 +151,14 @@
               </td>
               <td>
                 <img id="o" class="imgJuegosMini " data-valor="oso"
-                onclick="javascript: reproducirSonido('oso.wav');
+                onclick="javascript: reproducir('oso.wav');
                 enmarcar(event);
                 mostrarImgPrincipal('../img/niveles/oso.png','OSO')"" src="
                 ../img/niveles/oso.png" alt="imagen oso">
               </td>
               <td>
                 <img id="e2" class="imgJuegosMini " data-valor="aro"
-                onclick="javascript: reproducirSonido('aro.wav');
+                onclick="javascript: reproducir('aro.wav');
                 enmarcar(event);
                 mostrarImgPrincipal('../img/niveles/aro.png','ARO')"" src="
                 ../img/niveles/aro.png" alt="imagen ola">
@@ -166,18 +166,18 @@
               <td>
                 <img id="a1" class="imgJuegosMini " data-valor="ola"
                 src="../img/niveles/ola.png" onclick="javascript:
-                reproducirSonido('ola.wav'); enmarcar(event);
+                reproducir('ola.wav'); enmarcar(event);
                 mostrarImgPrincipal('../img/niveles/ola.png','OLA')"">
               </td>
               <td>
                 <img src=" ../img/niveles/empanadas.png" id="e1"
                 class="imgJuegosMini " onclick="javascript:
-                reproducirSonido('empanadas.wav'); enmarcar(event);
-                mostrarImgPrincipal('../img/niveles/empanadas.png','EMPANADAS')"">
+                reproducir('empanada.wav'); enmarcar(event);
+                mostrarImgPrincipal('../img/niveles/empanadas.png','EMPANADA')"">
               </td>
               <td>
                 <img src=" ../img/niveles/ala.png" class="imgJuegosMini"
-                data-valor="ala" id="a3" onclick="reproducirSonido('ala.wav');
+                data-valor="ala" id="a3" onclick="reproducir('ala.wav');
                 enmarcar(event);
                 mostrarImgPrincipal('../img/niveles/ala.png','ALA')"">
               </td>
