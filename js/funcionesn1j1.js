@@ -1,8 +1,6 @@
 let pintado = false; // En el juego , si se selecciona una imagen esta var se pone en true
 let letraSelec = null;
 
-
-
 const quitarAnimacion = () => {
     let element = document.getElementById("ayudabtn");
     element.classList.remove("pulse");
@@ -22,6 +20,11 @@ const ocultarElement = id => {
 const quitarAnim = id => {
   let elem = document.getElementById(id)
   elem.classList.remove("pulse")
+}
+
+const mostrarElement = id => {
+  let elem = document.getElementById(id)
+  elem.classList.remove("imgOcultar")
 }
 
 const animar = (id) => {
@@ -46,6 +49,8 @@ const mostrarImgPrincipal = (url,titulo) => {
 /*Selecciona con color una imagen elegida, y comprueba que 
 no haya otra seleccionada, en ese caso, la despinta, y pinta la nueva */
 function enmarcar(event) {
+  animar('j1-btncheck')
+  mostrarElement('manoayuda3')
   let element = document.getElementById("manoayuda2")
   element.classList.add("imgOcultar")
   element = document.getElementById("u")
@@ -96,6 +101,8 @@ function alerta() {
 
 /* Verifica que la imagen seleccionada sea la correcta */
 function comprobar(s) {
+  quitarAnim('j1-btncheck')
+  ocultarElement('manoayuda3')
   pintado = false;
   $(".cambiarBorde").removeClass("cambiarBorde"); //la imagen seleccionada se despinta
   if (letraSelec == "u") {
