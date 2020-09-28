@@ -125,9 +125,11 @@ b {
     animation-iteration-count: 8;
 }
 
-.imgmonstruo {
-    height: 150px;
-    width: 170px;
+.img-tina{
+    height: 200px;
+}
+
+.img-monster {
     animation-name: balanceo;
     animation-duration: 2s;
     animation-iteration-count: 2;
