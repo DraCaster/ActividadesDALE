@@ -24,7 +24,7 @@ function reproducirSonido(s) {
 function confirmSalida() {
     var sndSelec = new Audio("../sonidos/selec.wav");
     sndSelec.play();
-    alertify.success("<img src='../img/tinisaliendo.png'> SALIENDO... ");
+    alertify.success("<img src='../assets/flechaizquierda.png'> SALIENDO... ");
     setTimeout(function() {
         window.location.href = '../index.html';
     }, 1300);

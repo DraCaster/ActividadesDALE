@@ -7,6 +7,24 @@ const quitarAnimacion = () => {
     let ocultarMano = document.getElementById("manoayuda")
     ocultarMano.classList.add("imgOcultar")
 
+    let element2 = document.getElementById("manoayuda2")
+    element2.classList.remove("imgOcultar")
+    element2.classList.add("slideRightBtn")
+}
+
+const ocultarElement = id => {
+  let elem = document.getElementById(id)
+  elem.classList.add("imgOcultar")
+}
+
+const quitarAnim = id => {
+  let elem = document.getElementById(id)
+  elem.classList.remove("pulse")
+}
+
+const animar = (id) => {
+  let elem = document.getElementById(id)
+  elem.classList.add("pulse")
 }
 
 const mostrarImgPrincipal = (url,titulo) => {
@@ -23,60 +41,14 @@ const mostrarImgPrincipal = (url,titulo) => {
   elementTitulo.innerHTML= titulo
 }
 
-//JuegoExtra
-let tablas = 0;
-
-const checkGameExtra = () => {
- 
-   switch (tablas){
-    case 0: checkGameExtra('o'); break;
-    case 1: checkGameExtra('o1'); break;
-    case 2: checkGameExtra('u'); break;
-    default: console.log('nandemonai')
-  } 
-}
-
-const checkTableGameExtra = (letra) => {
-    var tabla = $('#' + letra);
-    var items = tabla.children('tbody').children('tr').find('img');
-    var cont = 0;
-    var padre;
-    var hijo;
-    for (var i = 0; i < items.length; i++) {
-        if (items[i].dataset.letra != letra){
-            hijo = document.createElement("div");
-            hijo.className+="item";
-            hijo.appendChild(items[i]);
-            padre = document.getElementById('pos-'+items[i].dataset.pos);
-            padre.appendChild(hijo);
-        }
-        if (items[i].dataset.letra == letra){
-            cont++;
-        }
-    }
-    //Le devuelvo la propiedad arrastrable a cada imagen
-    $('.item').draggable({
-                helper: 'clone'
-                
-            });
-
-            $('.box-image').droppable({
-                accept: '.item',
-                hoverClass: 'hovering',
-                drop: function(ev, ui) {
-                    ui.draggable.detach();
-                    $(this).append(ui.draggable);
-
-                }
-            });
-
-   return (cont==4);
-}
-
-
 /*Selecciona con color una imagen elegida, y comprueba que 
 no haya otra seleccionada, en ese caso, la despinta, y pinta la nueva */
 function enmarcar(event) {
+  let element = document.getElementById("manoayuda2")
+  element.classList.add("imgOcultar")
+  element = document.getElementById("u")
+  element.classList.remove("pulse")
+
   selec = event.target;
   if (pintado == false) {
     selec.className += " cambiarBorde";
@@ -97,18 +69,13 @@ var sndNO = new Audio("../sonidos/error.wav");
 
 function confirmar(s) {
   sndOK.play();
-  alertify.confirm(
-    "<img src='../assets/feliz.png'> <h1><b>&iexcl; EXCELENTE ! <br>&iexcl; SIGAMOS JUGANDO ! </b></h1>",
-    function (e) {
-      if (e) {
-        alertify.success("ELEGISTE '" + alertify.labels.ok + "'");
+  alertify.alert(
+    "<img src='../assets/feliz.png'> <h3>&iexcl; EXCELENTE !</h3>",
+    function () {
+        alertify.success("CARGANDO...");
         setTimeout(function () {
           window.location.href = "../html/" + s + ".html"; //Pasa al siguiente juego
         }, 1300);
-      } else {
-        alertify.error("ELEGISTE '" + alertify.labels.cancel + "'");
-        confirmSalida();
-      }
     }
   );
   return false;
@@ -135,3 +102,68 @@ function comprobar(s) {
     alerta();
   }
 }
+
+//JuegoExtra
+
+const checkGameExtra = (s) => {
+  let a = checkTableGameExtra('o',['o','l','a'])
+  let b = checkTableGameExtra('o1',['o','s','o'])
+  let c = checkTableGameExtra('u',['u','n','o'])
+  if(a && b && c){
+    confirmar(s)
+  }else{
+    alerta()
+  }
+  
+}
+
+
+const checkTableGameExtra = (letra, letras) => {
+    let tabla = $('#' + letra);
+    let items = tabla.children('tbody').children('tr').find('img');
+
+    let cont = 0;
+    let padre;
+    let hijo;
+   
+    console.log('itemslength',items.length)
+    for (var i = 0; i < items.length; i++) {
+
+        console.log('indice',i)
+        console.log('longletras',letras.length)
+        console.log('letraimg',items[i].dataset.letra)
+        console.log('letraposicion',letras[i])
+        console.log('letra if',items[i].dataset.letra)
+        console.log('letra if 1',letra[i])
+        console.log('if',items[i].dataset.letra == letra[i])
+        if (items[i].dataset.letra == letra[i]){
+          cont++;
+        }
+        if (items[i].dataset.letra != letras[i]){
+            hijo = document.createElement("div");
+            hijo.className+="item";
+            hijo.appendChild(items[i]);
+            padre = document.getElementById('pos-'+items[i].dataset.pos);
+            padre.appendChild(hijo);
+        }
+       
+        
+    }
+
+    //Le devuelvo la propiedad arrastrable a cada imagen
+    $('.item').draggable({
+                helper: 'clone'
+            });
+
+            $('.box-image-rayitas').droppable({
+                accept: '.item',
+                hoverClass: 'hovering',
+                drop: function(ev, ui) {
+                    ui.draggable.detach();
+                    $(this).append(ui.draggable);
+                }
+    });
+    console.log('cont',cont)
+   return (cont==3);
+}
+

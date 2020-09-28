@@ -1,0 +1,27 @@
+.fila-j2 {
+    text-align: center;
+    width: auto;
+    height: 200px;
+    float: left;
+    background: #42f44b;
+    margin: 40px 0px 40px 40px;
+}
+
+.fila-j2 table {
+    background: #42f44b;
+}
+
+.tablaj2{
+    background-color: #42f44b;
+    height: auto;
+    width: auto;
+}
+
+.menu-j2{
+    text-align: center;
+    width: auto;
+    height: 100px;
+    float: left;
+    background: #42f44b;
+    margin: 40px 0px 40px 40px;
+}

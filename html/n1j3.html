@@ -31,7 +31,19 @@
         <div class="center">
             <h1>CARGANDO</h1>
             <h1>ACTIVIDAD...</h1>
-            <img class="slideDown imgmonstruo" src="../assets/monstermenu1.png">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
         </div>
     </div>
     <div id="game" style="display: none;">
@@ -64,7 +76,7 @@
         <h4>ARMAR PAREJAS</h4>
     </div>
     <div class="center">
-        <img class="imgAyuda globoAyuda" src="../assets/ayudavoz.svg" onclick="javascript: reproducirSonido('juego3.wav');">&nbsp;<img class="imgAyuda2 slideRight" src="../assets/hacerclic.png"/> 
+        <img class="imgAyuda globoAyuda pulse" src="../assets/ayudavoz.svg" onclick="javascript: reproducirSonido('juego3.wav');">&nbsp;<img class="imgAyuda2 slideLeftBtn" src="../assets/hacerclic.png"/> 
     </div>
     <div>
         <!-- imagenes del juego -->
@@ -83,7 +95,7 @@
                     </td>
                     <td id="pos-2">
                         <div class="item">
-                            <img class="imgJuegosMini fadeIn" data-letra="u" data-pos="2" data-valor="uno" onclick="javascript: reproducirSonido('uno.wav'); enmarcar(event);" src="../img/niveles/uno.png"> <!--reemplazar por uña despues -->
+                            <img class="imgJuegosMini fadeIn" data-letra="u" data-pos="2" data-valor="uno" onclick="javascript: reproducirSonido('unia.wav'); enmarcar(event);" src="../img/niveles/unia.png"> <!--reemplazar por uña despues -->
                         </div>
                     </td>
                     <td id="pos-3">

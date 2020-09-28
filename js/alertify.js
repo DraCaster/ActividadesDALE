@@ -19,9 +19,10 @@
 		 */
 		dialogs = {
 			buttons : {
-				holder : "<nav class=\"alertify-buttons\">{{buttons}}</nav>",
+				holder : "<div class=\"alertify-buttons\">{{buttons}}</div>",
 				submit : "<button type=\"submit\" class=\"alertify-button alertify-button-ok\" id=\"alertify-ok\" />{{ok}}</button>",
-				ok     : "<a href=\"#\" class=\"alertify-button alertify-button-ok\" id=\"alertify-ok\">{{ok}}</a>",
+				ok     : "<a href=\"#\" class=\"alertify-button alertify-button-ok tossing\" id=\"alertify-ok\"><img src='../assets/flecha.png'/></a>",
+				siguiente:"<a href=\"#\" class=\"alertify-button alertify-button-ok\" id=\"alertify-ok\"><img src='../assets/flecha.png'/></a>",
 				cancel : "<a href=\"#\" class=\"alertify-button alertify-button-cancel\" id=\"alertify-cancel\">{{cancel}}</a>"
 			},
 			input   : "<input type=\"text\" class=\"alertify-text\" id=\"alertify-text\">",
@@ -50,7 +51,7 @@
 			 * @type {Object}
 			 */
 			labels : {
-				ok     : "SI",
+				ok     : "CONTINUAR",
 				cancel : "NO"
 			},
 
@@ -290,7 +291,7 @@
 			 */
 			init : function () {
 				// ensure legacy browsers support html5 tags
-				document.createElement("nav");
+				document.createElement("div");
 				document.createElement("article");
 				document.createElement("section");
 				// cover

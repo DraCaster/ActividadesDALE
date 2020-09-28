@@ -973,8 +973,8 @@ tossing
 	animation-name: tossing;
 	-webkit-animation-name: tossing;	
 
-	animation-duration: 2.5s;	
-	-webkit-animation-duration: 2.5s;
+	animation-duration: 2s;	
+	-webkit-animation-duration: 2s;
 
 	animation-iteration-count: infinite;
 	-webkit-animation-iteration-count: infinite;

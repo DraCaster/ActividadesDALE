@@ -4,6 +4,20 @@ var sndOK = new Audio("../sonidos/ganaste.wav");
 var sndNO = new Audio("../sonidos/error.wav");
 var tabla = ['null','null','null','null'];
 
+const ocultarElement = id => {
+    let elem = document.getElementById(id)
+    elem.classList.add("imgOcultar")
+  }
+  
+  const quitarAnim = id => {
+    let elem = document.getElementById(id)
+    elem.classList.remove("pulse")
+  }
+  
+  const animar = (id) => {
+    let elem = document.getElementById(id)
+    elem.classList.add("pulse")
+  }
 
 /*FUNCIONES DE LA ACTIVIDAD PRINCIPAL */
 function checkTable(letra) {
@@ -48,7 +62,7 @@ function checkTable(letra) {
 
 function confirmar(s) {
     sndOK.play();
-    alertify.confirm("<img src='../assets/feliz.png'> <h1><b>&iexcl; EXCELENTE ! <br>&iexcl; SIGAMOS JUGANDO ! </b></h1>", function(e) {
+    alertify.alert("<img src='../assets/feliz.png'> <h4>&iexcl; EXCELENTE !</h4>", function(e) {
         if (e) {
             alertify.success("ELEGISTE '" + alertify.labels.ok + "'");
             setTimeout(function() {
@@ -64,7 +78,7 @@ function confirmar(s) {
 
 function alerta() {
     sndNO.play();
-    alertify.alert("<img src='../assets/triste.png'> <h1><b> &iexcl; ALGO NO ESTA BIEN ! <br> &iexcl; INTENTALO DE NUEVO ! </b></h1>", function() {
+    alertify.alert("<img src='../assets/triste.png'> <h4> &iexcl; INTENTALO DE NUEVO !</h4>", function() {
         //aqui introducimos lo que haremos tras cerrar la alerta.
     });
 }
