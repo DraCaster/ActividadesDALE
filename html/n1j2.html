@@ -97,7 +97,9 @@
           id="ayuda1-n1j2"
           class="imgAyuda globoAyuda pulse"
           src="../assets/ayudavoz.svg"
-          onclick="javascript: reproducirSonido('juego2.wav'); ocultarElement('ayuda2-n1j2'); quitarAnim('ayuda1-n1j2'); animar('menu-n1j2')"
+          onclick="javascript: reproducirSonido('juego2.wav'); ocultarElement('ayuda2-n1j2'); quitarAnim('ayuda1-n1j2'); animar('menu-n1j2','pulse'); 
+          mostrarElemento('ayuda3-n1j2');
+          animar('ayuda3-n1j2','slideDownBtn');"
         />&nbsp;<img
           id="ayuda2-n1j2"
           class="imgAyuda2 slideLeftBtn"
@@ -106,10 +108,11 @@
       </div>
 
       <!-- IMAGENES -->
-      <div class="tablaj2"
-          class="imgAyuda2 slideLeftBtn"
-          src="../assets/hacerclickarriba.png">
-        <img id="ayuda3-n1j2" />
+      <div>
+        <img id="ayuda3-n1j2" class="imgAyuda2 imgOcultar"
+        src="../assets/hacerclicarriba.png"/>
+      </div>
+      <div class="tablaj2">
         <table>
           <tr>
             <td id="pos-0">
@@ -120,7 +123,7 @@
                   data-valor="auto"
                   data-pos="0"
                   data-letra="a"
-                  onclick="reproducirSonido('auto.wav'); enmarcar(event);"
+                  onclick="reproducirSonido('auto.wav'); enmarcar(event); ocultarElement('ayuda3-n1j2');"
                   src="../img/niveles/auto.png"
                 />
               </div>
@@ -223,7 +226,7 @@
 
       <div>
         <div class="fila-j2">
-          <h1>A</h1>
+          <img src="../assets/paco1.png" class="paco"/>
           <table id="a" class="tablas">
             <tr>
               <td>
@@ -242,7 +245,7 @@
           </table>
         </div>
         <div class="fila-j2">
-          <h1>E</h1>
+          <img src="../assets/tina2.png" class="tina"/>
           <table id="e" class="tablas">
             <tr>
               <td>

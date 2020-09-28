@@ -14,9 +14,14 @@ const ocultarElement = id => {
     elem.classList.remove("pulse")
   }
   
-  const animar = (id) => {
+  const animar = (id,animacion) => {
     let elem = document.getElementById(id)
-    elem.classList.add("pulse")
+    elem.classList.add(animacion)
+  }
+
+  const mostrarElemento = (id) => {
+    let elem = document.getElementById(id)
+    elem.classList.remove("imgOcultar")
   }
 
 /*FUNCIONES DE LA ACTIVIDAD PRINCIPAL */
