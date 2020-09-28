@@ -63,13 +63,13 @@ const mostrarImgPrincipal = (url,titulo) => {
 /*Selecciona con color una imagen elegida, y comprueba que 
 no haya otra seleccionada, en ese caso, la despinta, y pinta la nueva */
 function enmarcar(event) {
+
   animar('j1-btncheck')
   mostrarElement('manoayuda3')
+
   let element = document.getElementById("manoayuda2")
   element.classList.add("imgOcultar")
-  element = document.getElementById("u")
-  element.classList.remove("pulse")
-
+ 
   let selec = event.target;
   if (pintado == false) {
     selec.className += "cambiarBorde";

@@ -3,8 +3,6 @@
     width: 300px;
 }
 
-
-
 .tablaj1-extra {
     width: auto;
     height: 120px;
@@ -15,10 +13,6 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-}
-
-.cambiarBordeLetras {
-    border: solid #e25b2a;
 }
 
 .tabla1-2{
