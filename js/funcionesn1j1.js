@@ -1,5 +1,19 @@
-let pintado = false; // En el juego , si se selecciona una imagen esta var se pone en true
+var pintado = false; // En el juego , si se selecciona una imagen esta var se pone en true
 let letraSelec = null;
+
+const enmarcarGameExtra = event => {
+
+  let selec = event.target;
+  if (pintado == false) {
+    selec.className += "cambiarBordeLetras";
+    pintado = true;
+   
+  } else {
+    $(".cambiarBordeLetras").removeClass("cambiarBordeLetras");
+    selec.className += " cambiarBordeLetras";
+   
+  }
+}
 
 const quitarAnimacion = () => {
     let element = document.getElementById("ayudabtn");
@@ -56,9 +70,9 @@ function enmarcar(event) {
   element = document.getElementById("u")
   element.classList.remove("pulse")
 
-  selec = event.target;
+  let selec = event.target;
   if (pintado == false) {
-    selec.className += " cambiarBorde";
+    selec.className += "cambiarBorde";
     pintado = true;
     letraSelec = selec.id;
    
