@@ -11,13 +11,7 @@ function checkTable(letra) {
     var cont = 0;
     var padre;
     var hijo;
-    if(letra == 'o0' || letra == 'o1'){
-        letra = 'o';
-    }
-    if(letra == 'u0' || letra == 'u1'){
-        letra = 'u';
-    }
-    
+   
     for (var i = 0; i < items.length; i++) {
         if (items[i].dataset.letra != letra){
             hijo = document.createElement("div");
@@ -47,7 +41,7 @@ function checkTable(letra) {
                 }
             });
 
-   return (cont==2);
+   return (cont==4);
 }
 
 /*Cartelito*/
@@ -82,7 +76,7 @@ function enmarcar(event) {
 }
 
 function comprobar() {
-    if (checkTable('o0') & checkTable('o1') & checkTable('u0') & checkTable('u1')) {
+    if (checkTable('o') & checkTable('u')) {
         confirmar();
     } else {
         alerta();
