@@ -1,3 +1,5 @@
+/*Functions by game one*/
+
 var pintado = false; // En el juego , si se selecciona una imagen esta var se pone en true
 let letraSelec = null;
 
@@ -15,48 +17,19 @@ const enmarcarGameExtra = event => {
   }
 }
 
-const quitarAnimacion = () => {
-    let element = document.getElementById("ayudabtn");
-    element.classList.remove("pulse");
-    let ocultarMano = document.getElementById("manoayuda")
-    ocultarMano.classList.add("imgOcultar")
-
-    let element2 = document.getElementById("manoayuda2")
-    element2.classList.remove("imgOcultar")
-    element2.classList.add("slideRightBtn")
-}
-
-const ocultarElement = id => {
-  let elem = document.getElementById(id)
-  elem.classList.add("imgOcultar")
-}
-
-const quitarAnim = id => {
-  let elem = document.getElementById(id)
-  elem.classList.remove("pulse")
-}
-
-const mostrarElement = id => {
-  let elem = document.getElementById(id)
-  elem.classList.remove("imgOcultar")
-}
-
-const animar = (id) => {
-  let elem = document.getElementById(id)
-  elem.classList.add("pulse")
-}
-
 const mostrarImgPrincipal = (url,titulo) => {
  
-  let tabla = document.getElementById("tabla1-1")
-  tabla.classList.remove("imgOcultar")
+  let tabla = document.getElementById("table-j1-0")
+  tabla.classList.remove("hideElement")
   tabla.classList.add("tabla1-1")
 
   let elementImg = document.getElementById("imgj1");
-  elementImg.classList.add("imgJuegosG")
-  console.log('elemimg',elementImg)
-  let elementTitulo = document.getElementById("tituloj1");
   elementImg.src=url;
+
+  elementImg.classList.add("imgJuegosG")
+  
+  let elementTitulo = document.getElementById("tituloj1");
+
   elementTitulo.innerHTML= titulo
 }
 
@@ -64,23 +37,22 @@ const mostrarImgPrincipal = (url,titulo) => {
 no haya otra seleccionada, en ese caso, la despinta, y pinta la nueva */
 function enmarcar(event) {
 
-  animar('j1-btncheck')
-  mostrarElement('manoayuda3')
+  animationElement('btn-check-j1','pulse')
+  //mostrarElement('manoayuda3')
 
-  let element = document.getElementById("manoayuda2")
-  element.classList.add("imgOcultar")
+  let element = document.getElementById("help-j1-1")
+  element.classList.add("hideElement")
  
   let selec = event.target;
   if (pintado == false) {
-    selec.className += "cambiarBorde";
-    pintado = true;
+   // selec.className += "imgLittleBorder";
+   // pintado = true;
     letraSelec = selec.id;
    
   } else {
-    $(".cambiarBorde").removeClass("cambiarBorde");
-    selec.className += " cambiarBorde";
+   // $(".imgLittleBorder").removeClass("imgLittleBorder");
+   // selec.className += " imgLittleBorder";
     letraSelec = selec.id;
-   
   }
 }
 var sndOK = new Audio("../sonidos/ganaste.wav");
@@ -115,7 +87,8 @@ function alerta() {
 
 /* Verifica que la imagen seleccionada sea la correcta */
 function comprobar(s) {
- // quitarAnim('btn-check-j1')
+  //quitarAnim('j1-btncheck')
+ // ocultarElement('manoayuda3')
   pintado = false;
   $(".imgLittleBorder").removeClass("imgLittleBorder"); //la imagen seleccionada se despinta
   if (letraSelec == "u") {

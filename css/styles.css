@@ -1,0 +1,50 @@
+
+
+.hideElement{
+    display:none;
+}
+
+.center{
+    text-align: center;
+}
+
+.helpSound{
+    margin-left: 10px;
+    height: 70px;
+    width: 70px;
+}
+
+.helpPointer{
+    height: 60px;
+    width: 60px;
+    animation-name: balanceo;
+    animation-duration: 2s;
+    animation-iteration-count: 8;
+}
+
+@-webkit-keyframes balanceo {
+    20% {
+        -webkit-transform: scale(0.9) rotate(-3deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale(1.1) rotate(3deg);
+    }
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale(1, 1) rotate(-3deg);
+    }
+}
+
+.imgLittle{
+    height: 90px;
+    width: 100px;
+    border-radius: 4px;
+}
+
+.imgLittleBorder{
+    border: 5px solid #e25b2a;
+}

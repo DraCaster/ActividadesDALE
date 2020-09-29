@@ -1,185 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <title>Nivel 1 - Actividad 1</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/componentStyle.css" />
-    <link rel="stylesheet" href="../css/animacion.css" />
-    <link rel="stylesheet" type="text/css" href="../css/responsive.css" />
-    <link rel="stylesheet" href="../css/alertify.core.css" />
-    <link rel="stylesheet" href="../css/alertify.default.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Short+Stack"
-      rel="stylesheet"
-    />
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body class="siguientes">
-    <!-- PRESENTACION <-->
-    <div id="presentation">
-      <div class="center">
-        <h1>CARGANDO</h1>
-        <h1>ACTIVIDAD...</h1>
+<head>
+  <title>Nivel 1 - Actividad 1</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="../css/componentStyle.css" />
+  <link rel="stylesheet" href="../css/animacion.css" />
+  <link rel="stylesheet" href="../css/alertify.core.css" />
+  <link rel="stylesheet" href="../css/alertify.default.css" />
+  <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet" />
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
 
-        <div class="preloader-wrapper big active">
-          <div class="spinner-layer spinner-blue">
-            <div class="circle-clipper left">
-              <div class="circle"></div>
-            </div>
-            <div class="gap-patch">
-              <div class="circle"></div>
-            </div>
-            <div class="circle-clipper right">
-              <div class="circle"></div>
-            </div>
+<body class="siguientes">
+  <!-- PRESENTACION <-->
+  <div id="presentation">
+    <div class="center">
+      <h1>CARGANDO</h1>
+      <h1>ACTIVIDAD...</h1>
+
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
           </div>
         </div>
       </div>
     </div>
-    <div id="game" style="display: none">
-      <!-- ENCABEZADO -->
-      <nav>
-        <div class="nav-wrapper">
-          <a
-            data-target="mobile-demo"
-            class="sidenav-trigger btn-floating pulse"
-            ><i class="material-icons">menu</i></a
-          >
-          <ul class="right hide-on-med-and-down">
-            <li>
-              <a onclick="confirmSalida();"> INICIO </a>
-            </li>
-            <li>
-              <a
-                class="colorPrincipal color3"
-                onclick="javascript: ingresar('nivel1.html');"
-              >
-                ACTIVIDADES</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <ul class="sidenav" id="mobile-demo">
-        <h6 class="center colorPrincipal">ELEGI UNA OPCION</h6>
-        <li>
-          <a onclick="confirmSalida();" class="colorPrincipal">
-            <i class="material-icons color4">home</i>
-            INICIO</a
-          >
-        </li>
-        <li>
-          <a
-            class="colorPrincipal color3"
-            onclick="javascript: ingresar('nivel1.html');"
-          >
-            <i class="material-icons">create</i>
-            ACTIVIDADES</a
-          >
-        </li>
-      </ul>
-
-      <div class="tituloJuego">
-        <h4>&iquest;QUE VOY A DECIR?</h4>
+  </div>
+  <div id="game" style="display: none">
+    <!-- ENCABEZADO -->
+    <nav>
+      <div class="nav-wrapper">
+        <a data-target="mobile-demo" class="sidenav-trigger btn-floating pulse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a onclick="confirmSalida();"> INICIO </a>
+          </li>
+          <li>
+            <a class="colorPrincipal color3" onclick="javascript: ingresar('nivel1.html');">
+              ACTIVIDADES</a>
+          </li>
+        </ul>
       </div>
-      <div class="center">
-        <img
-          id="ayudabtn"
-          class="imgAyuda globoAyuda pulse"
-          src="../assets/ayudavoz.svg"
-          onclick="javascript: reproducir('juego1.wav'); quitarAnimacion()"
-        />
-        &nbsp;
-        <img
-          id="manoayuda"
-          class="imgAyuda2 slideLeftBtn"
-          src="../assets/hacerclic.png"
-        />
-      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <h6 class="center colorPrincipal">ELEGI UNA OPCION</h6>
+      <li>
+        <a onclick="confirmSalida();" class="colorPrincipal">
+          <i class="material-icons color4">home</i>
+          INICIO</a>
+      </li>
+      <li>
+        <a class="colorPrincipal color3" onclick="javascript: ingresar('nivel1.html');">
+          <i class="material-icons">create</i>
+          ACTIVIDADES</a>
+      </li>
+    </ul>
+
+    <div>
+      <h4>&iquest;QUE VOY A DECIR?</h4>
+    </div>
+    <div class="center">
+      <img id="help-sound-j1" class="helpSound pulse" src="../assets/img/helpsound.svg" onclick="javascript: 
+          playSound('../assets/sound/game-one.wav');
+          removeAnimation('help-sound-j1','pulse');
+          hideElement('help-j1-0');
+          viewElement('help-j1-1');
+          animationElement('help-j1-1','slideRightBtn')
+          " />
+      &nbsp;
+      <img id="help-j1-0" class="helpPointer slideLeftBtn" src="../assets/img/pointerleft.png" />
+    </div>
+    <div>
       <div>
-        <div>
-          <br/>
-          <table id="tabla1-1" class="imgOcultar">
-            <tr>
-              <td>
-                <img id="imgj1"/>
-              </td>
-              <td>
-                <h1 id="tituloj1"></h1>
-              </td>
-            </tr>
-          </table>
-          <table class="tablas tablaj1">
-            <tr>
-              <td>
-                <img
-                  id="manoayuda2"
-                  class="imgAyuda2 imgOcultar"
-                  src="../assets/hacerclicizquierda.png"
-                />
-              </td>
-              <td>
-                <img
-                  id="e"
-                  class="imgJuegosMini"
-                  data-valor="espada"
-                  onclick="javascript: reproducir('espada.wav'); enmarcar(event); mostrarImgPrincipal('../img/niveles/espada.png','ESPADA')"
-                  src="../img/niveles/espada.png"
-                  alt="imagen espada"
-                />
-              </td>
-              <td>
-                <img
-                  id="u"
-                  class="imgJuegosMini"
-                  data-valor="uno"
-                  onclick="javascript: reproducir('uno.wav');
-                            enmarcar(event); mostrarImgPrincipal('../img/niveles/uno.png','UNO')"
-                  src="../img/niveles/uno.png"
-                  alt="imagen numero uno"
-                />
-              </td>
-              <td>
-                <img id="o" class="imgJuegosMini " data-valor="oso"
-                onclick="javascript: reproducir('oso.wav');
+        <br />
+        <table id="table-j1-0" class="hideElement">
+          <tr>
+            <td>
+              <img id="imgj1" />
+            </td>
+            <td>
+              <h1 id="tituloj1"></h1>
+            </td>
+          </tr>
+        </table>
+        <table class="tablas tablaj1">
+          <tr>
+            <td>
+              <img id="help-j1-1" class="helpPointer hideElement" src="../assets/img/pointerright.png" />
+            </td>
+            <td>
+              <img id="e" class="imgLittle" data-valor="espada" onclick="javascript: 
+                  playSound('../assets/sound/words/espada.wav'); 
+                  enmarcar(event); 
+                  mostrarImgPrincipal('../assets/img/cards/espada.png','ESPADA')" src='../assets/img/cards/espada.png'
+                alt="imagen espada" />
+            </td>
+            <td>
+              <img id="u" class="imgLittle" data-valor="uno" onclick="javascript: playSound('../assets/sound/words/uno.wav');
+              enmarcar(event); 
+              mostrarImgPrincipal('../assets/img/cards/uno.png','UNO')"
+                src="../assets/img/cards/uno.png" alt="imagen numero uno"/>
+            </td>
+            <td>
+              <img id="o" class="imgLittle " data-valor="oso" onclick="javascript: playSound('../assets/sound/words/oso.wav');
                 enmarcar(event);
-                mostrarImgPrincipal('../img/niveles/oso.png','OSO')"" src="
-                ../img/niveles/oso.png" alt="imagen oso">
-              </td>
-              <td>
-                <img id="e2" class="imgJuegosMini " data-valor="aro"
-                onclick="javascript: reproducir('aro.wav');
+                mostrarImgPrincipal('../assets/img/cards/oso.png','OSO');"
+                src=" ../assets/img/cards/oso.png" alt="imagen oso">
+            </td>
+            <td>
+              <img id="e2" class="imgLittle " data-valor="aro" onclick="javascript: playSound('../assets/sound/words/aro.wav');
                 enmarcar(event);
-                mostrarImgPrincipal('../img/niveles/aro.png','ARO')"" src="
-                ../img/niveles/aro.png" alt="imagen ola">
+                mostrarImgPrincipal('../assets/img/cards/aro.png','ARO')"" src=" ../assets/img/cards/aro.png" alt="imagen ola">
+            </td>
+            <td>
+              <img id="a1" class="imgLittle " data-valor="ola" src="../assets/img/cards/ola.png" onclick="javascript:
+                playSound('../assets/sound/words/ola.wav'); enmarcar(event);
+                mostrarImgPrincipal('../assets/img/cards/ola.png','OLA')">
               </td>
               <td>
-                <img id="a1" class="imgJuegosMini " data-valor="ola"
-                src="../img/niveles/ola.png" onclick="javascript:
-                reproducir('ola.wav'); enmarcar(event);
-                mostrarImgPrincipal('../img/niveles/ola.png','OLA')"">
+                <img src=" ../assets/img/cards/empanadas.png" id="e1" class="imgLittle" onclick="javascript:
+                playSound('../assets/sound/words/empanada.wav'); enmarcar(event);
+                mostrarImgPrincipal('../assets/img/cards/empanadas.png','EMPANADA')">
               </td>
               <td>
-                <img src=" ../img/niveles/empanadas.png" id="e1"
-                class="imgJuegosMini " onclick="javascript:
-                reproducir('empanada.wav'); enmarcar(event);
-                mostrarImgPrincipal('../img/niveles/empanadas.png','EMPANADA')"">
-              </td>
-              <td>
-                <img src=" ../img/niveles/ala.png" class="imgJuegosMini"
-                data-valor="ala" id="a3" onclick="reproducir('ala.wav');
+                <img src=" ../assets/img/cards/ala.png" class="imgLittle" data-valor="ala" id="a3" onclick="playSound('../assets/sound/words/ala.wav');
                 enmarcar(event);
-                mostrarImgPrincipal('../img/niveles/ala.png','ALA')"">
+                mostrarImgPrincipal('../assets/img/cards/ala.png','ALA')">
               </td>
             </tr>
           </table>
@@ -188,47 +146,40 @@
         <div>
           <table class="tablas tablamenu">
             <td>
-              <img
-              id="manoayuda3"
-              class="imgAyuda2 imgOcultar"
-              src="../assets/hacerclicizquierda.png"
-            />
+              <img id="manoayuda3" class="imgAyuda2 imgOcultar" src="../assets/hacerclicizquierda.png" />
             </td>
             <td>
-              <img
-                id="j1-btncheck"
-                src="../img/check.png"
-                class="botonmenuN"
-                alt="boton comprobar"
-                onclick="javascript: comprobar('j1_1');"
-              />
+              <img id="btn-check-j1" src="../img/check.png" class="botonmenuN" alt="boton comprobar"
+                onclick="javascript: comprobar('j1_1');" />
             </td>
-          </table>
-        </div>
+        </table>
       </div>
-
-      <!--contenedor-->
     </div>
-    <script src="../js/jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="../js/alertify.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="../js/funciones.js"></script>
-    <script src="../js/funcionesn1j1.js"></script>
-    <script>
-      //Funciones al iniciar el juego
-      window.onload = function () {
-        setTimeout(function () {
-          $("#presentation").css("display", "none");
-          $("#game").css("display", "block");
-        }, 999);
-      };
 
-      // Inicializacion del menu lateral
-      $(document).ready(function () {
-        $("#mobile-demo").sidenav();
-      });
-      let options = { duration: 200 };
-    </script>
-  </body>
+    <!--contenedor-->
+  </div>
+  <script src="../js/jquery-3.1.1.js"></script>
+  <script type="text/javascript" src="../js/alertify.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="../js/index.js"></script>
+  <script src="../js/funciones.js"></script>
+  <script src="../js/game-one/index.js"></script>
+  <script>
+    //Funciones al iniciar el juego
+    window.onload = function () {
+      setTimeout(function () {
+        $("#presentation").css("display", "none");
+        $("#game").css("display", "block");
+      }, 999);
+    };
+
+    // Inicializacion del menu lateral
+    $(document).ready(function () {
+      $("#mobile-demo").sidenav();
+    });
+    let options = { duration: 200 };
+  </script>
+</body>
+
 </html>
