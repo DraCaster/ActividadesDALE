@@ -38,8 +38,8 @@ no haya otra seleccionada, en ese caso, la despinta, y pinta la nueva */
 function enmarcar(event) {
 
   animationElement('btn-check-j1','pulse')
-  //mostrarElement('manoayuda3')
-
+  viewElement('help-j1-2')
+ 
   let element = document.getElementById("help-j1-1")
   element.classList.add("hideElement")
  
@@ -87,6 +87,9 @@ function alerta() {
 
 /* Verifica que la imagen seleccionada sea la correcta */
 function comprobar(s) {
+  removeAnimation('btn-check-j1','pulse')
+  hideElement('help-j1-2')
+ 
   //quitarAnim('j1-btncheck')
  // ocultarElement('manoayuda3')
   pintado = false;
