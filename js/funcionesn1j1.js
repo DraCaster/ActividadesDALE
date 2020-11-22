@@ -1,19 +1,5 @@
-var pintado = false; // En el juego , si se selecciona una imagen esta var se pone en true
+let pintado = false; // En el juego , si se selecciona una imagen esta var se pone en true
 let letraSelec = null;
-
-const enmarcarGameExtra = event => {
-
-  let selec = event.target;
-  if (pintado == false) {
-    selec.className += "cambiarBordeLetras";
-    pintado = true;
-   
-  } else {
-    $(".cambiarBordeLetras").removeClass("cambiarBordeLetras");
-    selec.className += " cambiarBordeLetras";
-   
-  }
-}
 
 const quitarAnimacion = () => {
     let element = document.getElementById("ayudabtn");
@@ -126,11 +112,10 @@ function comprobar(s) {
 }
 
 //JuegoExtra
-
 const checkGameExtra = (s) => {
-  let a = checkTableGameExtra('o',['o','l','a'])
-  let b = checkTableGameExtra('o1',['o','s','o'])
-  let c = checkTableGameExtra('u',['u','n','o'])
+  let a = checkTableGameExtra('tabla1',['o','l','a'])
+  let b = checkTableGameExtra('tabla2',['o','s','o'])
+  let c = checkTableGameExtra('tabla3',['u','n','o'])
   if(a && b && c){
     confirmar(s)
   }else{
@@ -140,8 +125,9 @@ const checkGameExtra = (s) => {
 }
 
 
-const checkTableGameExtra = (letra, letras) => {
-    let tabla = $('#' + letra);
+const checkTableGameExtra = (tablaId, letras) => {
+
+    let tabla = $('#' + tablaId);
     let items = tabla.children('tbody').children('tr').find('img');
 
     let cont = 0;
@@ -149,16 +135,10 @@ const checkTableGameExtra = (letra, letras) => {
     let hijo;
    
     console.log('itemslength',items.length)
-    for (var i = 0; i < items.length; i++) {
+    console.log('ITEMS', items)
+    for (let i = 0; i < items.length; i++) {
 
-        console.log('indice',i)
-        console.log('longletras',letras.length)
-        console.log('letraimg',items[i].dataset.letra)
-        console.log('letraposicion',letras[i])
-        console.log('letra if',items[i].dataset.letra)
-        console.log('letra if 1',letra[i])
-        console.log('if',items[i].dataset.letra == letra[i])
-        if (items[i].dataset.letra == letra[i]){
+        if (items[i].dataset.letra == letras[i]){
           cont++;
         }
         if (items[i].dataset.letra != letras[i]){
