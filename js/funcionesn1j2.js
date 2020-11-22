@@ -2,13 +2,11 @@ var pintado = false;
 var selec;
 var sndOK = new Audio("../sonidos/ganaste.wav");
 var sndNO = new Audio("../sonidos/error.wav");
-var tabla = ['null','null','null','null'];
 
 const ocultarElement = id => {
     let elem = document.getElementById(id)
     elem.classList.add("imgOcultar")
   }
-  
   const quitarAnim = id => {
     let elem = document.getElementById(id)
     elem.classList.remove("pulse")
