@@ -107,20 +107,14 @@ function comprobarR(s) {
 
 /*FUNCION EXCLUSIVA DE LA ACTIVIDAD EXTRA*/
 
-function comprobarExtra(s,cantLetras,palabra){
+function comprobarExtra(tablaId, letras, cantidadDeLetras){
 
-    if(palabra == 'auto'){
-        var letras = ['a','u','t','o'];
-    }
-    else{
-        var letras = ['a','r','o'];
-    }
-
-    var tabla = $('#a');
+    var tabla = $('#'+'tablaId');
     var items = tabla.children('tbody').children('tr').find('img');
     var cont = 0;
     var padre;
     var hijo;
+
     for (var i = 0; i < items.length; i++) {
         if (items[i].dataset.letra != letras[i]){
             hijo = document.createElement("div");
@@ -150,17 +144,29 @@ function comprobarExtra(s,cantLetras,palabra){
                 }
             });
 
-    if(cont==cantLetras){
-        confirmar(s);
+            return (cont === cantidadDeLetras)
+
+}
+
+const checkGameExtra = proximoJuego  => {
+    let a = comprobarExtra('tablaUno',['a','u','t','o'], 4)
+    let b = comprobarExtra('tablaDos',['a','r','o'], 3)
+    let c = comprobarExtra('tablaTres',['a','l','a'], 3)
+
+    if (a && b && c){
+        confirmar(proximoJuego);
     }
     else{
         alerta();
     }
-
-
 }
+const quitarAnimacionj22 = () => {
+    let element = document.getElementById("ayudabtn");
+    element.classList.remove("pulse");
+    let ocultarMano = document.getElementById("manoayuda")
+    ocultarMano.classList.add("imgOcultar")
 
-function cambiarValores(){
-    //permite cambiar las imagenes y las letras para jugar con otra 
+    let element2 = document.getElementById("manoayuda2")
+    element2.classList.remove("imgOcultar")
+    element2.classList.add("slideRightBtn")
 }
-

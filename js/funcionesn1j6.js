@@ -41,25 +41,26 @@ function enmarcarMas(event) {
 
 function confirmar() {
     sndOK.play();
-    alertify.confirm("<img src='../assets/feliz.png'> <h1><b>&iexcl; EXCELENTE ! <br>&iexcl; SIGAMOS JUGANDO ! </b></h1>", function(e) {
-        if (e) {
-            alertify.success("ELEGISTE '" + alertify.labels.ok + "'");
-            setTimeout(function() {
-                window.location.href = '../html/n1j7.html'; //Pasa al siguiente juego
+    alertify.alert(
+        "<img src='../assets/feliz.png'> <h3>&iexcl; EXCELENTE !</h3>",
+        function () {
+            alertify.success("CARGANDO...");
+            setTimeout(function () {
+                window.location.href = "../html/n1j7.html"; //Pasa al siguiente juego
             }, 1300);
-        } else {
-            alertify.error("ELEGISTE '" + alertify.labels.cancel + "'");
-            confirmSalida();
         }
-    });
-    return false
+    );
+    return false;
 }
 
 function alerta() {
     sndNO.play();
-    alertify.alert("<img src='../assets/triste.png'> <h1><b> &iexcl; TE EQUIVOCASTE! <br> &iexcl; INTENTALO DE NUEVO ! </b></h1>", function() {
-        //aqui introducimos lo que haremos tras cerrar la alerta.
-    });
+    alertify.alert(
+        "<img src='../assets/triste.png'> <h3> &iexcl; INTENTALO DE NUEVO ! </b></h3>",
+        function () {
+            //aqui introducimos lo que haremos tras cerrar la alerta.
+        }
+    );
 }
 
 function faltanimg() {

@@ -134,8 +134,7 @@ const checkTableGameExtra = (tablaId, letras) => {
     let padre;
     let hijo;
    
-    console.log('itemslength',items.length)
-    console.log('ITEMS', items)
+
     for (let i = 0; i < items.length; i++) {
 
         if (items[i].dataset.letra == letras[i]){
@@ -165,7 +164,6 @@ const checkTableGameExtra = (tablaId, letras) => {
                     $(this).append(ui.draggable);
                 }
     });
-    console.log('cont',cont)
    return (cont==3);
 }
 

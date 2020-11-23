@@ -25,27 +25,7 @@
 </head>
 
 <body class="siguientes">
-    <!-- PRESENTACION <-->
-    <div id="presentation">
-        <div class="center">
-            <h1>CARGANDO</h1>
-            <h1>ACTIVIDAD...</h1>
-            <div class="preloader-wrapper big active">
-                <div class="spinner-layer spinner-blue">
-                  <div class="circle-clipper left">
-                    <div class="circle"></div>
-                  </div>
-                  <div class="gap-patch">
-                    <div class="circle"></div>
-                  </div>
-                  <div class="circle-clipper right">
-                    <div class="circle"></div>
-                  </div>
-                </div>
-              </div>
-        </div>
-    </div>
-    <div id="game" style="display:none;">
+    <div id="game">
         <!-- ENCABEZADO -->
         <nav>
             <div class="nav-wrapper">
@@ -56,7 +36,7 @@
                  INICIO 
                 </a>
                 </li>
-                <li><a class="colorPrincipal color3" onclick="javascript: ingresar('nivel1.html');"> 
+                <li><a class="colorPrincipal color3" onclick="ingresar('nivel1.html');">
                     ACTIVIDADES</a></li>
               </ul>
             </div>
@@ -67,7 +47,7 @@
             <li><a onclick="confirmSalida();" class="colorPrincipal">
                 <i class="material-icons color4">home</i>
                 INICIO</a></li>
-            <li><a class="colorPrincipal color3" onclick="javascript: ingresar('nivel1.html');"> 
+            <li><a class="colorPrincipal color3" onclick="ingresar('nivel1.html');">
                 <i class="material-icons">create</i>
                 ACTIVIDADES</a></li>
           </ul>
@@ -75,102 +55,81 @@
             <h4>EL PUEBLO MANDA</h4>
         </div>
         <div class="center">
-            <img class="imgAyuda globoAyuda" src="../assets/ayudavoz.svg" onclick="javascript: reproducirSonido('juego6.wav');">&nbsp;<img class="imgAyuda2 slideRight" src="../assets/hacerclic.png"/></h1> 
+            <img class="imgAyuda globoAyuda" src="../assets/ayudavoz.svg" onclick="reproducirSonido('juego6.wav');">&nbsp;<img class="imgAyuda2 slideRight" src="../assets/hacerclic.png"/></h1>
         </div>
         <br>
         <div>
             <div>
-                <h1>EL PUEBLO LES PIDE BUSCAR LOS DIBUJOS QUE COMIENZAN CON M.</h1>
                 <br>
                 <table class="tablas tablaj3">
                     <tr>
                         <td class="center">
                             <div>
-                                <img class="imgJuegosG slideDown" id="m0" data-valor="m" data-marca="no" onclick="javascript: reproducirSonido('mago.wav'); enmarcarMas(event);" src="../img/niveles/mago.png">
+                                <img class="imgJuegosG slideDown" id="m0" data-valor="m" data-marca="no" onclick="reproducirSonido('mago.wav'); enmarcarMas(event);" src="../img/niveles/mago.png">
                             </div>
                         </td>
                         <td class="center">
                             <div>
-                                <img class="imgJuegosG slideDown" id="m1" data-valor="m" data-marca="no" onclick="javascript: reproducirSonido('mano.wav'); enmarcarMas(event)" src="../img/niveles/mano.png">
+                                <img class="imgJuegosG slideDown" id="m1" data-valor="m" data-marca="no" onclick="reproducirSonido('mano.wav'); enmarcarMas(event)" src="../img/niveles/mano.png">
                             </div>
                         </td>
                         <td class="center">
                             <div>
-                                <img class="imgJuegosG slideDown" id="m2" data-valor="m" data-marca="no" onclick="javascript: reproducirSonido('mono.wav'); enmarcarMas(event);" src="../img/niveles/mono.png">
+                                <img class="imgJuegosG slideDown" id="m2" data-valor="m" data-marca="no" onclick="reproducirSonido('mono.wav'); enmarcarMas(event);" src="../img/niveles/mono.png">
                             </div>
                         </td>
                         <td class="center">
                             <div>
-                                <img class="imgJuegosG slideDown" id="v0" data-valor="v" data-marca="no" onclick="javascript: reproducirSonido('venda.wav'); enmarcarMas(event)" src="../img/niveles/venda.png">
+                                <img class="imgJuegosG slideDown" id="v0" data-valor="v" data-marca="no" onclick="reproducirSonido('venda.wav'); enmarcarMas(event)" src="../img/niveles/venda.png">
                             </div>
                         </td>
                         <td class="center">
                             <div>
-                                <img  class="imgJuegosG slideDown" id="t0" data-valor="t" data-marca="no" onclick="javascript: reproducirSonido('tambor.wav'); enmarcarMas(event)" src="../img/niveles/tambor.png">
+                                <img  class="imgJuegosG slideDown" id="t0" data-valor="t" data-marca="no" onclick="reproducirSonido('tambor.wav'); enmarcarMas(event)" src="../img/niveles/tambor.png">
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td class="center">
                             <div>
-                                <img class="imgJuegosG slideDown" id="m3" data-valor="m" data-marca="no" onclick="javascript: reproducirSonido('manzana.wav'); enmarcarMas(event)" src="../img/niveles/manzana.png">
+                                <img class="imgJuegosG slideDown" id="m3" data-valor="m" data-marca="no" onclick="reproducirSonido('manzana.wav'); enmarcarMas(event)" src="../img/niveles/manzana.png">
                             </div>
                         </td>
                         <td class="center">
                             <div>
-                                <img class="imgJuegosG slideDown" id="r0" data-valor="r" data-marca="no" onclick="javascript: reproducirSonido('reloj.wav'); enmarcarMas(event)" src="../img/niveles/reloj.png">
+                                <img class="imgJuegosG slideDown" id="r0" data-valor="r" data-marca="no" onclick="reproducirSonido('reloj.wav'); enmarcarMas(event)" src="../img/niveles/reloj.png">
                             </div>
                         </td>
                         <td class="center">
                             <div>
-                                <img class="imgJuegosG slideDown" id="m4" data-valor="m" data-marca="no" onclick="javascript: reproducirSonido('martillo.wav'); enmarcarMas(event)" src="../img/niveles/martillo.png">
+                                <img class="imgJuegosG slideDown" id="m4" data-valor="m" data-marca="no" onclick="reproducirSonido('martillo.wav'); enmarcarMas(event)" src="../img/niveles/martillo.png">
                             </div>
                         </td>
                         <td class="center">
                             <div>
-                                <img class="imgJuegosG slideDown" id="v1" data-valor="v" data-marca="no" onclick="javascript: reproducirSonido('volcan.wav'); enmarcarMas(event)" src="../img/niveles/volcan.png">
+                                <img class="imgJuegosG slideDown" id="v1" data-valor="v" data-marca="no" onclick="reproducirSonido('volcan.wav'); enmarcarMas(event)" src="../img/niveles/volcan.png">
                             </div>
                         </td>
                         <td class="center">
                             <div>
-                                <img class="imgJuegosG slideDown" id="m5" data-valor="m" data-marca="no" onclick="javascript: reproducirSonido('mesa.wav'); enmarcarMas(event);" src="../img/niveles/mesa.png">
+                                <img class="imgJuegosG slideDown" id="m5" data-valor="m" data-marca="no" onclick="reproducirSonido('mesa.wav'); enmarcarMas(event);" src="../img/niveles/mesa.png">
                             </div>
                         </td>
-
                     </tr>
                 </table>
             </div>
             <div>
                 <table class="tablas tablamenu">
-                    <td> <img src="../img/casa.png" class="botonmenuN" alt="boton salir" onclick="confirmSalida();"> </td>
-                    <td><img src="../img/refresh.png" class="botonmenuN" onclick="window.location.reload();"></td>
-                    <td><img src="../img/check.png" class="botonmenuN" alt="boton comprobar" onclick="javascript: comprobarJ5();"> </td>
+                    <td><img src="../img/check.png" class="botonmenuN" alt="boton comprobar" onclick="comprobarJ5();"> </td>
                 </table>
             </div>
         </div>
     </div>
     <!-- contenedor -->
     </div>
-            <script>
-                var seleccionadas = [];
-
-                //Funciones al iniciar el juego
-                window.onload = function() {
-
-                    setTimeout(function() {
-                        $('#presentation').css("display", "none");
-                        $('#game').css("display", "block");
-                    }, 999);
-
-                };
-            </script>
- <script src="../js/alertify.js"></script>
+    <script src="../js/alertify.js"></script>
     <script src="../js/funciones.js"></script>
     <script src="../js/funcionesn1j6.js"></script>
     <script src="../js/jquery-3.1.1.js"></script>
-
-
-
 </body>
-
 </html>
