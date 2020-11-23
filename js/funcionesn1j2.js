@@ -109,8 +109,10 @@ function comprobarR(s) {
 
 function comprobarExtra(tablaId, letras, cantidadDeLetras){
 
-    var tabla = $('#'+'tablaId');
+    var tabla = $('#'+tablaId);
+    console.log('TABLA: ',tabla)
     var items = tabla.children('tbody').children('tr').find('img');
+    console.log('ITEMS: ',items)
     var cont = 0;
     var padre;
     var hijo;
