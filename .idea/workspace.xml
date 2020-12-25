@@ -21,10 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca5bec05-b17e-484d-abf4-2efa59e93c02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/j2_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/j2_1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/n1j5.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/n1j5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/funcionesn1j2.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/funcionesn1j2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/funcionesn1j5.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/funcionesn1j5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/n1j1.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/n1j1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +38,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lujan/aprendo-jugando-v2" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -54,7 +52,8 @@
       <option name="presentableId" value="Default" />
       <updated>1606079349718</updated>
       <workItem from="1606079350764" duration="7750000" />
-      <workItem from="1606130145010" duration="337000" />
+      <workItem from="1606130145010" duration="4417000" />
+      <workItem from="1608932674136" duration="872000" />
     </task>
     <servers />
   </component>
@@ -72,6 +71,12 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1606154608134">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1606154608134" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
