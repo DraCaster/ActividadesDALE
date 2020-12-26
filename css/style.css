@@ -102,9 +102,6 @@ p {
 
 /******************Encabezado *************************/
 
-.tituloJuego {
-    font-size: 30px;
-}
 
 b {
     color: #fc9300;
@@ -112,9 +109,9 @@ b {
 }
 
 .imgAyuda {
-    margin-left: 10px;
-    height: 70px;
-    width: 70px;
+    margin-left: 20px;
+    height: 65px;
+    width: 65px;
 }
 
 .img-tina{
@@ -489,6 +486,24 @@ ul {
     border: 5px solid black;
 }
 
+/* Juego 3 */
+
+.tachito{
+    margin: 1rem;
+    padding-left: 30%;
+    padding-right: 30%;
+    /* IMPORTANTE */
+    text-align: center;
+}
+
+.tachitoimg{
+    border-radius: 4px;
+    border-color: #0c5460;
+}
+
+.imagenesSobrantes{
+    background:#42f44b;
+}
 
 /*tren juego 5*/
 
