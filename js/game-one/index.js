@@ -1,5 +1,4 @@
 /*Functions by game one*/
-
 var pintado = false; // En el juego , si se selecciona una imagen esta var se pone en true
 let letraSelec = null;
 
@@ -17,43 +16,19 @@ const enmarcarGameExtra = event => {
   }
 }
 
-const mostrarImgPrincipal = (url,titulo) => {
- 
-  let tabla = document.getElementById("table-j1-0")
-  tabla.classList.remove("hideElement")
-  tabla.classList.add("tabla1-1")
-
-  let elementImg = document.getElementById("imgj1");
-  elementImg.src=url;
-
-  elementImg.classList.add("imgJuegosG")
-  
-  let elementTitulo = document.getElementById("tituloj1");
-
-  elementTitulo.innerHTML= titulo
-}
 
 /*Selecciona con color una imagen elegida, y comprueba que 
 no haya otra seleccionada, en ese caso, la despinta, y pinta la nueva */
 function enmarcar(event) {
-
-  animationElement('btn-check-j1','pulse')
-  viewElement('help-j1-2')
- 
-  let element = document.getElementById("help-j1-1")
-  element.classList.add("hideElement")
- 
-  let selec = event.target;
-  if (pintado == false) {
-   // selec.className += "imgLittleBorder";
-   // pintado = true;
+    selec = event.target;
     letraSelec = selec.id;
-   
-  } else {
-   // $(".imgLittleBorder").removeClass("imgLittleBorder");
-   // selec.className += " imgLittleBorder";
-    letraSelec = selec.id;
-  }
+    if (!pintado) {
+        selec.className += " cambiarBorde";
+        pintado = true;
+    } else {
+        $('.cambiarBorde').removeClass("cambiarBorde");
+        selec.className += " cambiarBorde";
+    }
 }
 var sndOK = new Audio("../sonidos/ganaste.wav");
 var sndNO = new Audio("../sonidos/error.wav");
@@ -88,12 +63,8 @@ function alerta() {
 /* Verifica que la imagen seleccionada sea la correcta */
 function comprobar(s) {
   removeAnimation('btn-check-j1','pulse')
-  hideElement('help-j1-2')
- 
-  //quitarAnim('j1-btncheck')
- // ocultarElement('manoayuda3')
   pintado = false;
-  $(".imgLittleBorder").removeClass("imgLittleBorder"); //la imagen seleccionada se despinta
+  $('.cambiarBorde').removeClass("cambiarBorde");
   if (letraSelec == "u") {
     confirmar(s);
   } else {

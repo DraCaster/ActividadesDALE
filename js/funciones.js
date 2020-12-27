@@ -1,5 +1,4 @@
 var ganador = new Audio("../sonidos/sonidoganador.ogg");
-var texto2;
 
 function playsonido() {
     ganador.play();

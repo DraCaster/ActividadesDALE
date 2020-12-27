@@ -25,7 +25,7 @@ function confirmar() {
         function () {
             alertify.success("CARGANDO...");
             setTimeout(function () {
-                window.location.href = "../html/n1j7.html"; //Pasa al siguiente juego
+                window.location.href = "../html/j6_1.html"; //Pasa al siguiente juego
             }, 1300);
         }
     );

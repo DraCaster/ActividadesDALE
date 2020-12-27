@@ -89,6 +89,8 @@ p {
     width: 50px;
 }
 
+
+
 .botonmenuN {
     text-align: center;
     border-radius: 70px;
@@ -159,6 +161,14 @@ b {
 
 .cambiarBorde {
     border: 5px solid #e25b2a;
+}
+
+.imgJuegos1{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    height: 90px;
+    width: 100px;
 }
 
 .imgJuegosMini {
