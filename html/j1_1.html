@@ -1,205 +1,225 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>Actividad extra 1 </title>
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<link rel="stylesheet" href="../css/animacion.css">
-	<link rel="stylesheet" type="text/css" href="../css/responsive.css">
-	<link rel="stylesheet" type="text/css" href="../css/game1-extra.css">
-	<link rel="stylesheet" href="../css/alertify.core.css" />
-	<link rel="stylesheet" href="../css/alertify.default.css" />
-	<link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet" />
-	<!-- Compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <title>Sesion 1</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animacion.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../css/game1-extra.css">
+    <link rel="stylesheet" href="../css/alertify.core.css"/>
+    <link rel="stylesheet" href="../css/alertify.default.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet"/>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 </head>
 
 <body class="siguientes">
-	<nav>
-		<div class="nav-wrapper">
-			<a data-target="mobile-demo" class="sidenav-trigger btn-floating pulse"><i
-					class="material-icons">menu</i></a>
-			<ul class="right hide-on-med-and-down">
-				<li>
-					<a onclick="confirmSalida();">
-						INICIO
-					</a>
-				</li>
-				<li><a class="colorPrincipal color3" onclick="javascript: ingresar('nivel1.html');">
-						ACTIVIDADES</a></li>
-			</ul>
-		</div>
-	</nav>
-	<h4>TRAZAMOS LAS RAYITAS Y ESCRIBIMOS</h4>
-	<div class="center">
-		<img id="ayudabtn" class="imgAyuda globoAyuda pulse" src="../assets/ayudavoz.svg"
-			onclick="javascript: 
-			reproducir('juegoextra1.wav'); 
-			quitarAnimacion(); 
+<nav>
+    <div class="nav-wrapper">
+        <a data-target="mobile-demo" class="sidenav-trigger btn-floating pulse"><i
+                class="material-icons">menu</i></a>
+        <ul style="padding-left: 30%">
+            <li>
+                <h4 style="color: white">ARMA LAS PALABRAS</h4>
+            </li>
+            <li>
+                <img id="ayudabtn" class="imgAyuda globoAyuda pulse" src="../assets/ayudavoz.svg"
+                     onclick="javascript:
+			reproducir('juegoextra1.wav');
+			quitarAnimacion();
 			animar('img1');"/>&nbsp;
-			<img
-			id="manoayuda" 
-			class="imgAyuda2 slideLeftBtn" 
-			src="../assets/hacerclic.png"/>
-	</div>
-	<table class="tabla1-2">
-		<tr>
-			<td>
-				<img id="manoayuda5" class="imgAyuda2 imgOcultar" src="../assets/hacerclicizquierda.png" />
-			</td>
-			<td id="pos-0">
-				<div class="item"><img src="../img/palabras/a.png" class="slideDown letras"
-						onclick="reproducirSonido('A.wav');" data-pos="0" data-letra="a">
-				</div>
-			</td>
-			<td id="pos-1">
-				<div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown letras"
-						onclick="reproducirSonido('O.wav');" data-pos="1" data-letra="o">
-				</div>
-			</td>
-			<td id="pos-2">
-				<div class="item"><img src="../img/palabras/l.png" class="imgJuegosMini slideDown letras"
-						onclick="reproducirSonido('L.wav');" data-pos="2" data-letra="l">
-				</div>
-			</td>
-			<td id="pos-3">
-				<div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown letras
+                <img
+                        id="manoayuda"
+                        class="imgAyuda2 slideLeftBtn"
+                        src="../assets/hacerclic.png"/>
+
+            </li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+            <li>
+                <a onclick="confirmSalida();">
+                    INICIO
+                </a>
+            </li>
+            <li><a class="colorPrincipal color3" onclick="javascript: ingresar('nivel1.html');">
+                ACTIVIDADES</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col s12 m12">
+            <table class="tabla1-2">
+                <tr>
+                    <td>
+                        <img id="manoayuda5" class="imgAyuda2 imgOcultar" src="../assets/hacerclicizquierda.png"/>
+                    </td>
+                    <td id="pos-0">
+                        <div class="item"><img src="../img/palabras/a.png" class="slideDown letras"
+                                               onclick="reproducirSonido('A.wav');" data-pos="0" data-letra="a">
+                        </div>
+                    </td>
+                    <td id="pos-1">
+                        <div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown letras"
+                                               onclick="reproducirSonido('O.wav');" data-pos="1" data-letra="o">
+                        </div>
+                    </td>
+                    <td id="pos-2">
+                        <div class="item"><img src="../img/palabras/l.png" class="imgJuegosMini slideDown letras"
+                                               onclick="reproducirSonido('L.wav');" data-pos="2" data-letra="l">
+                        </div>
+                    </td>
+                    <td id="pos-3">
+                        <div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown letras
 					" onclick="reproducirSonido('O.wav');" data-pos="3" data-letra="o">
-				</div>
-			</td>
-			<td id="pos-4">
-				<div class="item"><img src="../img/palabras/u.png" class="imgJuegosMini slideDown letras"
-						onclick="reproducirSonido('U.wav');" data-pos="4" data-letra="u">
-				</div>
-			</td>
-			<td id="pos-5">
-				<div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown letras"
-						onclick="reproducirSonido('O.wav'); " data-pos="5" data-letra="o">
-				</div>
-			</td>
-			<td id="pos-6">
-				<div class="item"><img src="../img/palabras/n.png" class="imgJuegosMini slideDown letras"
-						onclick="javascript: reproducirSonido('N.wav');" data-pos="6" data-letra="n">
-				</div>
-			</td>
-			<td id="pos-7">
-				<div class="item"><img src="../img/palabras/s.png" class="imgJuegosMini slideDown letras"
-						onclick="javascript: reproducirSonido('S.wav');" data-pos="7" data-letra="s">
-				</div>
-			</td>
-			<td id="pos-8">
-				<div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown letras"
-						onclick="javascript: reproducirSonido('O.wav');" data-pos="8" data-letra="o">
-				</div>
-			</td>
-		</tr>
-	</table>
-
-	<!-- Cajitas -->
-
-	<div class="fila1 slideLeft">
-		<img id="manoayuda2" class="imgAyuda2 imgOcultar" src="../assets/hacerclicizquierda.png" />
-		<img onclick="javascript: 
-		reproducir('ola.wav');  
-		ocultarElement('manoayuda2'); 
+                        </div>
+                    </td>
+                    <td id="pos-4">
+                        <div class="item"><img src="../img/palabras/u.png" class="imgJuegosMini slideDown letras"
+                                               onclick="reproducirSonido('U.wav');" data-pos="4" data-letra="u">
+                        </div>
+                    </td>
+                    <td id="pos-5">
+                        <div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown letras"
+                                               onclick="reproducirSonido('O.wav'); " data-pos="5" data-letra="o">
+                        </div>
+                    </td>
+                    <td id="pos-6">
+                        <div class="item"><img src="../img/palabras/n.png" class="imgJuegosMini slideDown letras"
+                                               onclick="javascript: reproducirSonido('N.wav');" data-pos="6"
+                                               data-letra="n">
+                        </div>
+                    </td>
+                    <td id="pos-7">
+                        <div class="item"><img src="../img/palabras/s.png" class="imgJuegosMini slideDown letras"
+                                               onclick="javascript: reproducirSonido('S.wav');" data-pos="7"
+                                               data-letra="s">
+                        </div>
+                    </td>
+                    <td id="pos-8">
+                        <div class="item"><img src="../img/palabras/o.png" class="imgJuegosMini slideDown letras"
+                                               onclick="javascript: reproducirSonido('O.wav');" data-pos="8"
+                                               data-letra="o">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col s3 m3">
+            <div class="fila1 slideLeft">
+                <img id="manoayuda2" class="imgAyuda2 imgOcultar" src="../assets/hacerclicizquierda.png"/>
+                <img onclick="javascript:
+		reproducir('ola.wav');
+		ocultarElement('manoayuda2');
 		mostrarElement('manoayuda3');
 		quitarAnim('img1');
 		animar('img2')"
-		src="../img/niveles/ola.png" class="imgJuegosMini" id="img1">
-		<table id="tabla1" class="tablas">
-			<tr>
-				<td>
-					<div class="box-image-rayitas"> </div>
-				</td>
-				<td>
-					<div class="box-image-rayitas"></div>
-				</td>
-				<td>
-					<div class="box-image-rayitas"></div>
-				</td>
-			</tr>
-		</table>
-	</div>
-	<div class="fila1 slideLeft">
-		<img id="manoayuda3" class="imgAyuda2 imgOcultar" src="../assets/hacerclicizquierda.png" />
-		<img id="img2"
-			onclick="javascript: 
-			reproducir('oso.wav'); 
-			ocultarElement('manoayuda3'); 
+                     src="../img/niveles/ola.png" class="imgJuegosMini" id="img1">
+                <table id="tabla1" class="tablas">
+                    <tr>
+                        <td>
+                            <div class="box-image-rayitas"></div>
+                        </td>
+                        <td>
+                            <div class="box-image-rayitas"></div>
+                        </td>
+                        <td>
+                            <div class="box-image-rayitas"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col s3 m3">
+            <div class="fila1 slideLeft">
+                <img id="manoayuda3" class="imgAyuda2 imgOcultar" src="../assets/hacerclicizquierda.png"/>
+                <img id="img2"
+                     onclick="javascript:
+			reproducir('oso.wav');
+			ocultarElement('manoayuda3');
 			mostrarElement('manoayuda4');
 			quitarAnim('img2');
 			animar('img3')"
-			src="../img/niveles/oso.png" class="imgJuegosMini">
-		<table id="tabla2" class="tablas">
-			<tbody>
-				<tr>
-					<td>
-						<div class="box-image-rayitas"> </div>
-					</td>
-					<td>
-						<div class="box-image-rayitas"></div>
-					</td>
-					<td>
-						<div class="box-image-rayitas"></div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<div class="fila1 slideLeft">
-		<img id="manoayuda4" class="imgAyuda2 imgOcultar" src="../assets/hacerclicizquierda.png" />
-		<img id="img3" 
-		onclick="javascript: 
-		reproducir('uno.wav'); 
-		ocultarElement('manoayuda4'); 
+                     src="../img/niveles/oso.png" class="imgJuegosMini">
+                <table id="tabla2" class="tablas">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="box-image-rayitas"></div>
+                        </td>
+                        <td>
+                            <div class="box-image-rayitas"></div>
+                        </td>
+                        <td>
+                            <div class="box-image-rayitas"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col s3 m3">
+            <div class="fila1 slideLeft">
+                <img id="manoayuda4" class="imgAyuda2 imgOcultar" src="../assets/hacerclicizquierda.png"/>
+                <img id="img3"
+                     onclick="javascript:
+		reproducir('uno.wav');
+		ocultarElement('manoayuda4');
 		mostrarElement('manoayuda5')
 		quitarAnim('img3');"
-		src="../img/niveles/uno.png" class="imgJuegosMini">
-		<table id="tabla3" class="tablas">
-			<tbody>
-				<tr>
-					<td>
-						<div class="box-image-rayitas"></div>
-					</td>
-					<td>
-						<div class="box-image-rayitas"></div>
-					</td>
-					<td>
-						<div class="box-image-rayitas"></div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<div class="fila1 slideLeft">
-		<h4>CORREGIR</h4>
-		<img src="../img/check.png" class="botonmenuN" alt="boton comprobar"
-					onclick="javascript: checkGameExtra('n1j2');">
-	</div>
+                     src="../img/niveles/uno.png" class="imgJuegosMini">
+                <table id="tabla3" class="tablas">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="box-image-rayitas"></div>
+                        </td>
+                        <td>
+                            <div class="box-image-rayitas"></div>
+                        </td>
+                        <td>
+                            <div class="box-image-rayitas"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col s3 m3">
+            <div class="fila1 slideLeft">
+                <h4>CORREGIR</h4>
+                <img src="../img/check.png" class="botonmenuN" alt="boton comprobar"
+                     onclick="javascript: checkGameExtra('n1j2');">
+            </div>
+        </div>
 
-	<script src="../js/jquery-3.1.1.js"></script>
-	<script type="text/javascript" src="../js/alertify.js"></script>
-	<script src="../interfaz/jquery-ui.min.js"></script>
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	<script src="../js/funciones.js"></script>
-	<script src="../js/funcionesn1j1.js"></script>
-	<script>
-		$('.item').draggable({
-			helper: 'clone'
-		});
+    </div>
 
-		$('.box-image-rayitas').droppable({
-			accept: '.item',
-			hoverClass: 'hovering',
-			drop: function (ev, ui) {
-				ui.draggable.detach();
-				$(this).append(ui.draggable);
-			}
-		});
 
-	</script>
+</div>
+<script src="../js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="../js/alertify.js"></script>
+<script src="../interfaz/jquery-ui.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="../js/funciones.js"></script>
+<script src="../js/funcionesn1j1.js"></script>
+<script>
+    $('.item').draggable({
+        helper: 'clone'
+    });
+
+    $('.box-image-rayitas').droppable({
+        accept: '.item',
+        hoverClass: 'hovering',
+        drop: function (ev, ui) {
+            ui.draggable.detach();
+            $(this).append(ui.draggable);
+        }
+    });
+
+</script>
 </body>
 
 </html>
