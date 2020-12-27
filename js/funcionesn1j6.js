@@ -42,6 +42,18 @@ function alerta() {
     );
 }
 
+function siguiente(){
+    sndOK.play();
+    alertify.alert(
+        "<img src='../assets/feliz.png'> <h3>&iexcl; EXCELENTE !</h3>",
+        function () {
+            $('#tacho').css("display", "block");
+            $('#mesa').css("display", "none");
+        }
+    );
+    return false
+}
+
 function faltanimg() {
     sndNO.play();
     alertify.alert("<img src='../assets/triste.png'> <h1><b> &iexcl; ALGO NO ESTA BIEN ! <br> &iexcl; INTENTALO DE NUEVO ! </b></h1>", function() {
@@ -49,18 +61,3 @@ function faltanimg() {
     });
 }
 
-
-function comprobarJ5() {
-
-    if (cantM == 6 & cantO == 0) {
-            confirmar();
-    }else{
-        if(cantM < 6){
-            faltanimg();
-        }
-        else{
-            alerta();
-        }
-    }
-
-}

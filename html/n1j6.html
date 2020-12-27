@@ -54,34 +54,28 @@
             <!-- IMAGENES -->
             <div class="col s12 m6" style="background-color: #42f44b;">
                 <img class="itemsM imgJuegosMini slideDown"
-                     id="m0"
-                     data-valor="m"
-                     data-marca="no"
                      onclick="reproducirSonido('mago.wav');
                                 enmarcarMas(event);"
                      src="../img/niveles/mago.png">
 
                 <img class="itemsM imgJuegosMini slideDown"
-                     id="m1"
-                     data-valor="m"
-                     data-marca="no"
                      onclick="reproducirSonido('mano.wav');
                                    enmarcarMas(event)"
-                     src="../img/niveles/mano.png">
-                <img class="itemsM imgJuegosMini slideDown" id="m2" data-valor="m" data-marca="no"
-                     onclick="reproducirSonido('mono.wav'); enmarcarMas(event);" src="../img/niveles/mono.png">
-                <img class="otherItems imgJuegosMini slideDown" id="v0" data-valor="v" data-marca="no"
-                     onclick="reproducirSonido('venda.wav'); enmarcarMas(event)" src="../img/niveles/venda.png">
-                <img class="otherItems imgJuegosMini slideDown" id="t0" data-valor="t" data-marca="no"
-                     onclick="reproducirSonido('tambor.wav'); enmarcarMas(event)" src="../img/niveles/tambor.png">
-                <img class="itemsM imgJuegosMini slideDown" id="m3" data-valor="m" data-marca="no"
-                     onclick="reproducirSonido('manzana.wav'); enmarcarMas(event)" src="../img/niveles/manzana.png">
-                <img class="otherItems imgJuegosMini slideDown" id="r0" data-valor="r" data-marca="no"
-                     onclick="reproducirSonido('reloj.wav'); enmarcarMas(event)" src="../img/niveles/reloj.png">
-                <img class="itemsM imgJuegosMini slideDown" id="m4" data-valor="m" data-marca="no"
-                     onclick="reproducirSonido('martillo.wav'); enmarcarMas(event)" src="../img/niveles/martillo.png">
-                <img class="otherItems imgJuegosMini slideDown" id="v1" data-valor="v" data-marca="no"
-                     onclick="reproducirSonido('volcan.wav'); enmarcarMas(event)" src="../img/niveles/volcan.png">
+                     src="../img/niveles/mano.png"/>
+                <img class="itemsM imgJuegosMini slideDown"
+                     onclick="reproducirSonido('mono.wav'); enmarcarMas(event);" src="../img/niveles/mono.png"/>
+                <img class="otherItems imgJuegosMini slideDown"
+                     onclick="reproducirSonido('venda.wav'); enmarcarMas(event)" src="../img/niveles/venda.png"/>
+                <img class="otherItems imgJuegosMini slideDown"
+                     onclick="reproducirSonido('tambor.wav'); enmarcarMas(event)" src="../img/niveles/tambor.png"/>
+                <img class="itemsM imgJuegosMini slideDown"
+                     onclick="reproducirSonido('manzana.wav'); enmarcarMas(event)" src="../img/niveles/manzana.png"/>
+                <img class="otherItems imgJuegosMini slideDown"
+                     onclick="reproducirSonido('reloj.wav'); enmarcarMas(event)" src="../img/niveles/reloj.png"/>
+                <img class="itemsM imgJuegosMini slideDown"
+                     onclick="reproducirSonido('martillo.wav'); enmarcarMas(event)" src="../img/niveles/martillo.png"/>
+                <img class="otherItems imgJuegosMini slideDown"
+                     onclick="reproducirSonido('volcan.wav'); enmarcarMas(event)" src="../img/niveles/volcan.png"/>
             </div>
 
             <!-- MESA -->
@@ -94,15 +88,16 @@
                 </div>
             </div>
 
-
-
-            <div style="background-color: #42f44b; padding-right: 100px; padding-left: 100px;">
-                <h4>CORREGIR</h4>
-                <div style="text-align: center">
-                    <img src="../img/check.png" class="botonmenuN"
-                         alt="boton comprobar" onclick="comprobarJ5();"/>
+            <!-- TACHO -->
+            <div id="tacho" class="col s12 m6" style="display: none">
+                <div id="tachito">
+                </div>
+                <div>
+                    <img src="../assets/cesto.png"
+                         style="width: 300px; height: 300px"/>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -113,10 +108,14 @@
 <script src="../js/jquery-3.1.1.js"></script>
 <script src="../interfaz/jquery-ui.min.js"></script>
 <script>
+    let cantidadDeImagenes = 0
+    let cantidadDeImagenesSobrantes = 0
     var $itemsM = $(".itemsM"),
-        $othersItems = $(".otherItems"),
+        $otherItems = $(".otherItems"),
         $mesa = $("#mesa"),
-        $imagenes = $("#imagenes");
+        $imagenes = $("#imagenes"),
+        $tacho = $("#tacho"),
+        $tachito = $("#tachito");
 
     //Items con letra M
     $itemsM.draggable({
@@ -125,7 +124,7 @@
         cursor: "move" //estilo del cursor
     });
     //Otros Items
-    $othersItems.draggable({
+    $otherItems.draggable({
         helper: "clone",
         revert: "invalid",
         cursor: "move"
@@ -133,22 +132,43 @@
 
     $mesa.droppable({
         accept: ".itemsM",
-       hoverClass: "hovering",
+        hoverClass: "hovering",
         drop: function (ev, ui) {
-            addToTheTable(ui.draggable)
+            addToTheTable(ui.draggable, $imagenes)
+            checkTable()
         },
     });
 
-    function addToTheTable($item) {
-        $item.fadeOut(function () {
-            $item.appendTo($imagenes).fadeIn(function () {
-                $item
-                    .animate({height: "65px",
-                        width: "75px"})
+    $tacho.droppable({
+        accept: ".otherItems",
+        hoverClass: "hovering",
+        drop: function (ev, ui) {
+            addToTheTable(ui.draggable, $tachito)
+            cantidadDeImagenesSobrantes++
+            if (cantidadDeImagenesSobrantes === 4) {
+                confirmar()
+            }
+        }
+    });
 
+    function addToTheTable($item, element) {
+        $item.fadeOut(function () {
+            $item.appendTo(element).fadeIn(function () {
+                $item
+                    .animate({
+                        height: "65px",
+                        width: "75px"
+                    })
             });
         });
         $item.detach()
+    }
+
+    function checkTable() {
+        cantidadDeImagenes++
+        if (cantidadDeImagenes === 5) {
+            siguiente()
+        }
     }
 
 </script>
