@@ -19,31 +19,19 @@
 
 <body class="siguientes">
 
-    <div id="presentation">
-        <div class="center">
-            <h1>CARGANDO</h1>
-            <h1>ACTIVIDAD...</h1>
-            <div class="preloader-wrapper big active">
-                <div class="spinner-layer spinner-blue">
-                  <div class="circle-clipper left">
-                    <div class="circle"></div>
-                  </div>
-                  <div class="gap-patch">
-                    <div class="circle"></div>
-                  </div>
-                  <div class="circle-clipper right">
-                    <div class="circle"></div>
-                  </div>
-                </div>
-              </div>
-        </div>
-    </div>
-    <div id="game" style="display:none;">
+    <div id="game">
         <!-- ENCABEZADO -->
         <nav>
-            <div class="nav-wrapper">
-                <a data-target="mobile-demo" class="sidenav-trigger btn-floating pulse"><i
-                        class="material-icons">menu</i></a>
+            <div>
+                <ul style="padding-left: 30%">
+                    <li><h4 style="color: white">EL TREN</h4>
+                    </li>
+                    <li>
+                        <img class="imgAyuda globoAyuda" src="../assets/ayudavoz.svg"
+                             onclick="reproducirSonido('juego5.wav');">&nbsp;<img class="imgAyuda2 slideRight"
+                                                                                  src="../assets/hacerclic.png" />
+                    </li>
+                </ul>
                 <ul class="right hide-on-med-and-down">
                     <li>
                         <a onclick="confirmSalida();">
@@ -56,27 +44,9 @@
             </div>
         </nav>
 
-        <ul class="sidenav" id="mobile-demo">
-            <h6 class="center colorPrincipal">ELEGI UNA OPCION</h6>
-            <li><a onclick="confirmSalida();" class="colorPrincipal">
-                    <i class="material-icons color4">home</i>
-                    INICIO</a></li>
-            <li><a class="colorPrincipal color3" onclick="ingresar('nivel1.html');">
-                    <i class="material-icons">create</i>
-                    ACTIVIDADES</a></li>
-        </ul>
-        <div class="tituloJuego">
-            <h4>EL TREN</h4>
-        </div>
-        <div class="center">
-            <img class="imgAyuda globoAyuda" src="../assets/ayudavoz.svg"
-                onclick="reproducirSonido('juego5.wav');">&nbsp;<img class="imgAyuda2 slideRight"
-                src="../assets/hacerclic.png" /></h1>
-        </div>
         <!-- imagenes del juego -->
-
         <div>
-            <table class="tablas tablaj1">
+            <table id="imagenesjuego5" class="tablas tablaj1">
                 <tr>
                     <td id="pos-0">
                         <div class="item">
@@ -153,76 +123,103 @@
                     </td>
                 </tr>
             </table>
+        </div>
+
+        <!-- Tachito -->
+        <div id="descartar" style="display: none">
+            <div class="tachito">
+                <div class="imagenesSobrantes">
+                    <img src="../img/niveles/espejo.png" class="imgJuegosMini sobrantes"/>
+                    <img src="../img/niveles/arania.png" class="imgJuegosMini sobrantes"/>
+                </div>
+                <div class="imagenesSobrantes">
+
+                </div>
+            </div>
+            <div id="tacho" class="tachito">
+                <img src="../img/tacho.png" class="tachitoimg"/>
+            </div>
+            <div class="tachito">
+                <div class="imagenesSobrantes">
+                    <h3>CORREGIR</h3>
+                    <img class="botonmenuN"
+                         src="../img/check.png"
+                         onclick="javascript: siguiente()"/>
+                </div></div>
+        </div>
 
             <!-- trencitos -->
-            <div class="fila3 slideLeft">
-                <table class="tablas">
-                    <tr>
-                        <td></td>
-                        <td>
-                            <img src="../img/tren.png" class="imgJuegosMini">
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="fila4 slideLeft">
-                <h1 class="colorOsc">LETRA E</h1>
-                <table id="e" class="tablas">
-                    <tr>
-                    <tr>
-                        <td>
-                            <div class="box-image"> </div>
-                        </td>
-                        <td>
+            <div class="row" id="caja1">
+                <div class="fila3 slideLeft">
+                    <table class="tablas">
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="../img/tren.png" class="imgJuegosMini">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="fila4 slideLeft">
+                    <h4 class="colorOsc">LETRA E</h4>
+                    <table id="e" class="tablas">
+                        <tr>
+                        <tr>
+                            <td>
+                                <div class="box-image"> </div>
+                            </td>
+                            <td>
 
-                            <div class="box-image"></div>
-                        </td>
-                        <td>
-                            <div class="box-image"></div>
-                        </td>
-                        <td>
-                            <div class="box-image"></div>
-                        </td>
-                    </tr>
-                </table>
+                                <div class="box-image"></div>
+                            </td>
+                            <td>
+                                <div class="box-image"></div>
+                            </td>
+                            <td>
+                                <div class="box-image"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="fila2 slideLeft">
+                    <h4 class="colorOsc">LETRA I</h4>
+                    <table id="i" class="tablas">
+                        <tr>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="box-image"></div>
+                            </td>
+                            <td>
+                                <div class="box-image"></div>
+                            </td>
+                            <td>
+                                <div class="box-image"></div>
+                            </td>
+                            <td>
+                                <div class="box-image">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            <div class="fila2 slideLeft">
-                <h1 class="colorOsc">LETRA I</h1>
-                <table id="i" class="tablas">
-                    <tr>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="box-image"></div>
-                        </td>
-                        <td>
-                            <div class="box-image"></div>
-                        </td>
-                        <td>
-                            <div class="box-image"></div>
-                        </td>
-                        <td>
-                            <div class="box-image">
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+
             <!-- BOTONES -->
-            <div>
+            <div id="caja2">
                 <table class="tablas tablamenu">
                     <td><img class="botonmenuN" src="../img/check.png" alt="boton comprobar"
-                            onclick="javascript: comprobarR('n1j6.html');">
+                            onclick="javascript: comprobarR();">
                     </td>
                 </table>
             </div>
-            <!-- contenedor -->
+
         </div>
+
         <script type="text/javascript" src="../js/alertify.js"></script>
         <script src="../js/funciones.js"></script>
         <script src="../js/funcionesn1j5.js"></script>
         <script src="../js/jquery-3.1.1.js"></script>
-        <script type="text/javascript"></script>
         <script src="../interfaz/jquery-ui.min.js"></script>
         <script>
             $('.item').draggable({
@@ -240,19 +237,6 @@
                 }
             });
 
-        </script>
-        <script>
-            var seleccionadas = [];
-
-            //Funciones al iniciar el juego
-            window.onload = function () {
-
-                setTimeout(function () {
-                    $('#presentation').css("display", "none");
-                    $('#game').css("display", "block");
-                }, 999);
-
-            };
         </script>
 
 </body>

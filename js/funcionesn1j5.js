@@ -45,15 +45,29 @@ function checkTable(letra) {
 
 /*Cartelito*/
 
-function confirmar(s) {
+function confirmar() {
+    sndOK.play();
+    alertify.alert(
+        "<img src='../assets/feliz.png'> <h3>&iexcl; EXCELENTE !</h3>",
+        function () {
+            alertify.success("CARGANDO...");
+            $('#descartar').css("display", "block");
+            $('#caja1').css("display", "none");
+            $('#caja2').css("display", "none");
+            $('#imagenesjuego3').css("display","none");
+        }
+    );
+    return false
+}
+function siguiente(){
     sndOK.play();
     alertify.alert(
         "<img src='../assets/feliz.png'> <h3>&iexcl; EXCELENTE !</h3>",
         function () {
             alertify.success("CARGANDO...");
             setTimeout(function () {
-                window.location.href = "../html/" + s ; //Pasa al siguiente juego
-            }, 1300);
+                 window.location.href = "../html/n1j6.html" ; //Pasa al siguiente juego
+             }, 1300);
         }
     );
     return false
@@ -80,9 +94,9 @@ function enmarcar(event) {
     }
 }
 
-function comprobarR(s) {
+function comprobarR() {
     if (checkTable('i') & checkTable('e')) {
-        confirmar(s);
+        confirmar();
     } else {
         alerta();
     }
