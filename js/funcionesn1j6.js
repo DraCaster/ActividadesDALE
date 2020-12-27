@@ -2,37 +2,16 @@ var sndOK = new Audio("../sonidos/ganaste.wav");
 var sndNO = new Audio("../sonidos/error.wav");
 var cantM = 0;
 var cantO = 0;
+var pintado = false
 
-
-/*Selecciona con color una imagen elegida, y comprueba que 
-no haya otra seleccionada, en ese caso, la despinta, y pinta la nueva */
 function enmarcarMas(event) {
     selec = event.target;
-    obj = document.getElementById(selec.id);
-    //console.log($('#'+selec.id).data('marca'));
-    if(obj.dataset.marca == "no"){
-        obj.dataset.marca = "si";
-       // obj.setAttribute('marca', 'si');
-        obj.className +=" zoom";
-        obj.className +=" cambiarBorde";
-        if(obj.dataset.valor == 'm'){
-            cantM++;
-        }
-        else{
-            cantO++;
-        }
-    }
-    else{
-         obj.dataset.marca = "no";
-        //obj.setAttribute('marca','no');
-        $('#' + selec.id).removeClass("zoom");
-        $('#' + selec.id).removeClass("cambiarBorde");
-        if(obj.dataset.valor == 'm'){
-            cantM--;
-        }else{
-            cantO--;
-        }
-
+    if (pintado == false) {
+        selec.className += " cambiarBorde";
+        pintado = true;
+    } else {
+        $('.cambiarBorde').removeClass("cambiarBorde");
+        selec.className += " cambiarBorde";
     }
 
 }

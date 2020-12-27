@@ -90,9 +90,10 @@ p {
 }
 
 .botonmenuN {
+    text-align: center;
     border-radius: 70px;
     height: 85px;
-    width: 85;
+    width: 85px;
 }
 
 .botonmenuN:hover {

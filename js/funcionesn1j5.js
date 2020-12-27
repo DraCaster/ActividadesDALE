@@ -54,7 +54,7 @@ function confirmar() {
             $('#descartar').css("display", "block");
             $('#caja1').css("display", "none");
             $('#caja2').css("display", "none");
-            $('#imagenesjuego3').css("display","none");
+            $('#imagenesjuego5').css("display","none");
         }
     );
     return false
