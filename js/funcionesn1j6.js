@@ -61,3 +61,55 @@ function faltanimg() {
     });
 }
 
+function checkTableGameExtraJ6(tablaId, letras){
+    let tabla = $('#' + tablaId);
+    let items = tabla.children('tbody').children('tr').find('img');
+
+    let cont = 0;
+    let padre;
+    let hijo;
+
+
+    for (let i = 0; i < items.length; i++) {
+
+        if (items[i].dataset.letra == letras[i]){
+            cont++;
+        }
+        if (items[i].dataset.letra != letras[i]){
+            hijo = document.createElement("div");
+            hijo.className+="item";
+            hijo.appendChild(items[i]);
+            padre = document.getElementById('pos-'+items[i].dataset.pos);
+            padre.appendChild(hijo);
+        }
+
+
+    }
+
+    //Le devuelvo la propiedad arrastrable a cada imagen
+    $('.item').draggable({
+        helper: 'clone'
+    });
+
+    $('.box-image-rayitas').droppable({
+        accept: '.item',
+        hoverClass: 'hovering',
+        drop: function(ev, ui) {
+            ui.draggable.detach();
+            $(this).append(ui.draggable);
+        }
+    });
+    return (cont==4);
+
+}
+
+function checkGameExtra(s){
+    let a = checkTableGameExtraJ6('tabla1',['m','a','n','o'])
+    let b = checkTableGameExtraJ6('tabla2',['m','o','n','o'])
+    let c = checkTableGameExtraJ6('tabla3',['m','e','s','a'])
+    if(a && b && c){
+        confirmar(s)
+    }else{
+        alerta()
+    }
+}

@@ -9,43 +9,41 @@ function checkTable(letra) {
     var cont = 0;
     var padre;
     var hijo;
-    if(letra == 's0' || letra == 's1'){
-        letra = 's';
-    }
-    if(letra == 'm0'){
-        letra = 'm';
-    }
-    
+
     for (var i = 0; i < items.length; i++) {
-        if (items[i].dataset.letra != letra){
+        if (items[i].dataset.letra != letra) {
             hijo = document.createElement("div");
-            hijo.className+="item";
+            hijo.className += "item";
             hijo.appendChild(items[i]);
-            padre = document.getElementById('pos-'+items[i].dataset.pos);
+            padre = document.getElementById('pos-' + items[i].dataset.pos);
             padre.appendChild(hijo);
         }
-        if (items[i].dataset.letra == letra){
+        if (items[i].dataset.letra == letra) {
             cont++;
         }
     }
 
     //Le devuelvo la propiedad arrastrable a cada imagen
     $('.item').draggable({
-                helper: 'clone'
-                
-            });
+        helper: 'clone'
 
-            $('.box-image').droppable({
-                accept: '.item',
-                hoverClass: 'hovering',
-                drop: function(ev, ui) {
-                    ui.draggable.detach();
-                    $(this).append(ui.draggable);
+    });
 
-                }
-            });
+    $('.box-image').droppable({
+        accept: '.item',
+        hoverClass: 'hovering',
+        drop: function (ev, ui) {
+            ui.draggable.detach();
+            $(this).append(ui.draggable);
 
-   return (cont==2);
+        }
+    });
+    if (letra === 's') {
+        return cont === 4
+    } else {
+        return cont === 2
+    }
+
 }
 
 /*Cartelito*/
@@ -86,9 +84,24 @@ function enmarcar(event) {
     }
 }
 
-function comprobar(s) {
-    if (checkTable('s0') & checkTable('m0') & checkTable('s1')) {
-        confirmar(s);
+function siguiente () {
+    sndOK.play();
+    alertify.alert(
+        "<img src='../assets/feliz.png'> <h3>&iexcl; EXCELENTE !</h3>",
+        function () {
+            $('#tacho').css("display", "block");
+            $('.fila1').css("display", "none");
+            $('.fila2').css("display", "none");
+            $('.tablas').css("display","none");
+            $('#sobrantes').css("display","block")
+        }
+    );
+    return false;
+}
+
+function comprobar() {
+    if (checkTable('s') && checkTable('m')) {
+        siguiente();
     } else {
         alerta();
     }
@@ -96,15 +109,14 @@ function comprobar(s) {
 
 /*FUNCION EXCLUSIVA DE LA ACTIVIDAD EXTRA*/
 
-function comprobarExtra(s,cantLetras,palabra){
+function comprobarExtra(s, cantLetras, palabra) {
 
-    if(palabra == 'mano'){
-        var letras = ['m','a','n','o'];
-    }
-    else if(palabra == 'mono'){
-        var letras = ['m','o','n','o'];
-    }else{
-        var letra = ['m','e','s','a'];
+    if (palabra == 'mano') {
+        var letras = ['m', 'a', 'n', 'o'];
+    } else if (palabra == 'mono') {
+        var letras = ['m', 'o', 'n', 'o'];
+    } else {
+        var letra = ['m', 'e', 's', 'a'];
     }
 
     var tabla = $('#m');
@@ -113,38 +125,37 @@ function comprobarExtra(s,cantLetras,palabra){
     var padre;
     var hijo;
     for (var i = 0; i < items.length; i++) {
-        if (items[i].dataset.letra != letras[i]){
+        if (items[i].dataset.letra != letras[i]) {
             hijo = document.createElement("div");
-            hijo.className+="item";
+            hijo.className += "item";
             hijo.appendChild(items[i]);
-            padre = document.getElementById('pos-'+items[i].dataset.pos);
+            padre = document.getElementById('pos-' + items[i].dataset.pos);
             padre.appendChild(hijo);
         }
-        if (items[i].dataset.letra == letras[i]){
+        if (items[i].dataset.letra == letras[i]) {
             cont++;
         }
     }
 
     //Le devuelvo la propiedad arrastrable a cada imagen
     $('.item').draggable({
-                helper: 'clone'
-                
-            });
+        helper: 'clone'
 
-            $('.box-image').droppable({
-                accept: '.item',
-                hoverClass: 'hovering',
-                drop: function(ev, ui) {
-                    ui.draggable.detach();
-                    $(this).append(ui.draggable);
+    });
 
-                }
-            });
+    $('.box-image').droppable({
+        accept: '.item',
+        hoverClass: 'hovering',
+        drop: function (ev, ui) {
+            ui.draggable.detach();
+            $(this).append(ui.draggable);
 
-    if(cont==cantLetras){
+        }
+    });
+
+    if (cont == cantLetras) {
         confirmar(s);
-    }
-    else{
+    } else {
         alerta();
     }
 
